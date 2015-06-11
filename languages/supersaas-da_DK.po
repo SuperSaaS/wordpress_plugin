@@ -1,0 +1,73 @@
+# SUPERSAAS WORDPRESS PLUGIN I18N
+# Copyright (C) 2010
+# This file is distributed under the same license as the SuperSaaS package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: http://www.supersaas.nl/info/contact\n"
+"POT-Creation-Date: 2010-05-29 21:43+0200\n"
+"PO-Revision-Date:  2010-05-29 21:43+0200\n"
+"Last-Translator: SuperSaaS <kontakt@supersaas.dk>\n"
+"Language-Team: SuperSaaS <kontakt@supersaas.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Dette modul viser en &quot;Book nu&quot; knap som automatisk logger en bruger ind på din SuperSaaS plan ved brug af hans WordPress bruger navn. Bruger informationerne bliver videregivet samtidig med at bruger informationerne bliver oprettet eller ændret hos SuperSaaS. Dermed undgår brugerne at få 2 x login. Det gælder både den gratis og betalte version"
+
+msgid "Book Now!"
+msgstr "Book nu"
+
+msgid "www.supersaas.com"
+msgstr "www.supersaas.dk"
+
+msgid "(Setup incomplete)"
+msgstr "(Modul opsætning ikke færdig)"
+
+msgid "SuperSaaS Settings"
+msgstr "SuperSaaS indstillinger"
+
+msgid "SuperSaaS account name"
+msgstr "SuperSaaS konto navn"
+
+msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
+msgstr "Konto navnet på din SuperSaaS konto. Hvis du ikke har et konto navn endnu, skal du lave en konto på supersaas.dk"
+
+msgid "SuperSaaS password"
+msgstr "SuperSaaS adgangskode"
+
+msgid "The password for the administrator of your SuperSaaS account."
+msgstr "Adgangskoden for administratoren af din SuperSaaS konto"
+
+msgid "Schedule name"
+msgstr "Navn på din plan"
+
+msgid "The name of the schedule or URL to redirect to after login."
+msgstr "Navnet på din plan eller URL der omdirigeres til efter login"
+
+msgid "Button Label"
+msgstr "Tekst på knap"
+
+msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
+msgstr "Tekst på knappen, som vises. Eksempelvis 'book nu'"
+
+msgid "Button Image"
+msgstr "Billede til knap"
+
+msgid "optional"
+msgstr "valgfrit"
+
+msgid "Location of an image file to use as the button. Can be left blank."
+msgstr "Placering for billede filen, som bruges på knappen"
+
+msgid "Custom domain name"
+msgstr "Skræddersy domæne navn"
+
+msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
+msgstr "Hvis du ændrede URL til dit eget domæne navn, som skal pege på SuperSaaS, indtaster du det her"
+
+msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+

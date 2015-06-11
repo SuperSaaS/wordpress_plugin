@@ -1,0 +1,73 @@
+# SUPERSAAS WORDPRESS PLUGIN I18N
+# Copyright (C) 2010
+# This file is distributed under the same license as the SuperSaaS package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: http://www.supersaas.nl/info/contact\n"
+"POT-Creation-Date: 2010-05-29 21:43+0200\n"
+"PO-Revision-Date:  2010-05-29 21:43+0200\n"
+"Last-Translator: SuperSaaS <supersaas@supersaas.nl>\n"
+"Language-Team: SuperSaaS <supersaas@supersaas.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Deze module toont een knop waarmee gebruikers automatisch met hun WordPress gebruikersnaam worden ingelogd op een SuperSaaS agenda. Aan de SuperSaaS kant wordt automatisch een gebruikersnaam aangemaakt met de meegstuurde informatie, en een bestaande gebruikersnaam wordt zonodig aangepast. Werkt met zowel de betaalde als de gratis versie van SuperSaaS."
+
+msgid "Book Now!"
+msgstr "Reserveer nu"
+
+msgid "www.supersaas.com"
+msgstr "www.supersaas.nl"
+
+msgid "(Setup incomplete)"
+msgstr "(Instellingen incompleet)"
+
+msgid "SuperSaaS Settings"
+msgstr "SuperSaaS instellingen"
+
+msgid "SuperSaaS account name"
+msgstr "SuperSaaS accountnaam"
+
+msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
+msgstr "De gebruikersnaam van uw SuperSaaS account. Als u geen gebruikersnaam heeft moet u deze eerst aanmaken op supersaas.nl"
+
+msgid "SuperSaaS password"
+msgstr "SuperSaaS wachtwoord"
+
+msgid "The password for the administrator of your SuperSaaS account."
+msgstr "Het wachtwoord van de beheerder van het SuperSaaS account"
+
+msgid "Schedule name"
+msgstr "Agendanaam"
+
+msgid "The name of the schedule or URL to redirect to after login."
+msgstr "Naam van de agenda of een URL waar na het inloggen heen wordt gesprongen"
+
+msgid "Button Label"
+msgstr "Opschrift knop"
+
+msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
+msgstr "De tekst die op de knop wordt weergegeven, bijvoorbeeld 'Reserveer nu!'"
+
+msgid "Button Image"
+msgstr "Plaatje van knop"
+
+msgid "optional"
+msgstr "optioneel"
+
+msgid "Location of an image file to use as the button. Can be left blank."
+msgstr "Locatie waar een plaatje te vinden is dat als knop wordt getoond"
+
+msgid "Custom domain name"
+msgstr "Eigen domeinnaam"
+
+msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
+msgstr "Als u een eigen domeinnaam naar SuperSaaS laat wijzen voer die dan hier in"
+
+msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+

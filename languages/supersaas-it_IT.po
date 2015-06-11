@@ -1,0 +1,72 @@
+# SUPERSAAS WORDPRESS PLUGIN I18N
+# Copyright (C) 2010
+# This file is distributed under the same license as the SuperSaaS package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: http://www.supersaas.it/info/contact\n"
+"POT-Creation-Date: 2010-05-29 21:43+0200\n"
+"PO-Revision-Date: 2015-06-11 01:05+0100\n"
+"Last-Translator: SuperSaaS <supporto@supersaas.it>\n"
+"Language-Team: SuperSaaS <supersaas@supersaas.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Questo modulo visualizza un pulsante &quot;Prenota Ora&quot; che automaticamente logga l'utente a un calendario prenotazioni SuperSaaS utilizzando i suoi parametri di accesso WordPress. Provvede inoltre a trasferire le informazioni utente al database SuperSaaS, creandole ex novo o aggiornandole. L'utente evita così di dover fare un doppio login. Il modulo funziona sia con la versione gratuita che con quelle a pagamento di SuperSaaS."
+
+msgid "Book Now!"
+msgstr "Prenota Ora"
+
+msgid "www.supersaas.com"
+msgstr "www.supersaas.it"
+
+msgid "(Setup incomplete)"
+msgstr "(Setup modulo incompleto)"
+
+msgid "SuperSaaS Settings"
+msgstr "Impostazioni SuperSaaS"
+
+msgid "SuperSaaS account name"
+msgstr "Nome utente SuperSaaS"
+
+msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
+msgstr "Il nome utente del tuo account SuperSaaS. Se non disponi ancora di un nome utente SuperSaaS, creane uno sul sito www.supersaas.it"
+
+msgid "SuperSaaS password"
+msgstr "Password SuperSaaS"
+
+msgid "The password for the administrator of your SuperSaaS account."
+msgstr "La password amministrativa del tuo account SuperSaaS"
+
+msgid "Schedule name"
+msgstr "Nome del calendario prenotazioni"
+
+msgid "The name of the schedule or URL to redirect to after login."
+msgstr "Il nome del calendario prenotazioni o l'URL a cui indirizzare l'utente dopo il login"
+
+msgid "Button Label"
+msgstr "Etichetta pulsante"
+
+msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
+msgstr "Testo del pulsante visualizzato, ad esempio 'Crea Appuntamento'"
+
+msgid "Button Image"
+msgstr "Immagine pulsante"
+
+msgid "optional"
+msgstr "opzionale"
+
+msgid "Location of an image file to use as the button. Can be left blank."
+msgstr "Posizione del file immagine da utilizzare come pulsante"
+
+msgid "Custom domain name"
+msgstr "Nome di dominio personalizzato"
+
+msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
+msgstr "Se hai creato un nome di dominio personalizzato che punta a SuperSaaS inseriscilo qui"
+
+msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"

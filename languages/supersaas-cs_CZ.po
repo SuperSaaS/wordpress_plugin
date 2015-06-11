@@ -1,0 +1,72 @@
+# SUPERSAAS WORDPRESS PLUGIN I18N
+# Copyright (C) 2010
+# This file is distributed under the same license as the SuperSaaS package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: http://www.supersaas.nl/info/contact\n"
+"POT-Creation-Date: 2010-05-29 21:43+0200\n"
+"PO-Revision-Date: 2011-02-03 11:47+0100\n"
+"Last-Translator: ddd <ddd@ddd.cz>\n"
+"Language-Team: SuperSaaS <supersaas@supersaas.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Tento modul zobrazí tlačítko 'Rezervuj' které automaticky přihlásí uživatele do SuperSaaS rozvrhu s jeho uživatelským jménem z Wordpressu. Spolu s tím pošle nebo updatuje informace o uživateli v SuperSaaS podle potřeby. Odstraní se tak možnost dvojitého přihlašování. Funguje jak s verzí zdarma i s placenou verzí rezervačního systému SuperSaaS"
+
+msgid "Book Now!"
+msgstr "Rezervuj zde"
+
+msgid "www.supersaas.com"
+msgstr "www.supersaas.cz"
+
+msgid "(Setup incomplete)"
+msgstr "(Nastavení není kompletní)"
+
+msgid "SuperSaaS Settings"
+msgstr "SuperSaaS nastavení"
+
+msgid "SuperSaaS account name"
+msgstr "název účtu v SuperSaaS "
+
+msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
+msgstr "Název Vašeho účtu v SuperSaaS, pokud ještě účet v SuperSaaS nemáte vytvořte si jej na www.supersaas.cz"
+
+msgid "SuperSaaS password"
+msgstr "SuperSaaS heslo"
+
+msgid "The password for the administrator of your SuperSaaS account."
+msgstr "Heslo k Vašemu administrátorskému ůčtu v SuperSaaS"
+
+msgid "Schedule name"
+msgstr "Jméno Vašeho rozvrhu"
+
+msgid "The name of the schedule or URL to redirect to after login."
+msgstr "Jméno Vašeho rozvrhu nebo jeho celé URL"
+
+msgid "Button Label"
+msgstr "Popis tlačítka"
+
+msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
+msgstr "Text který se zobrazí v tlačítku, např. 'Vytvořit schůzku'"
+
+msgid "Button Image"
+msgstr "Obrázek tlačítka"
+
+msgid "optional"
+msgstr "volitelné"
+
+msgid "Location of an image file to use as the button. Can be left blank."
+msgstr "Umístění obrázku použitého jako tlačítko. Může zůstat prázdné."
+
+msgid "Custom domain name"
+msgstr "Vaše doména"
+
+msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
+msgstr "Pokud jste si nastavili pro rezervační systém vaši vlastní doménu , vložte její název sem. Může zůstat prázdné"
+
+msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
