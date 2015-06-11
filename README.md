@@ -6,6 +6,8 @@ Note that you will need to configure both the WordPress plugin *and* your SuperS
 
 <http://www.supersaas.com/info/doc/integration/wordpress_integration>
 
+___Warning: If you do not ask your users to log in to your own website, you should follow the general instructions on how to [integrate a schedule](http://www.supersaas.com/info/doc/integration "Integration | Integrate a schedule in your website") in your website. The module provided here will only work when the user is already logged into your own WordPress site.___
+
 Once installed you can add a button to your pages by placing the *supersaas* shortcode in the text of a WordPress article:
 
 * Default button example:
@@ -14,7 +16,7 @@ Once installed you can add a button to your pages by placing the *supersaas* sho
 ```
 * A custom button example:
 ```
-[supersaas after=booking_system label="Book Here!" image='http://link.to/background.png']
+[supersaas after=booking_system label="Book Here!" image='http://cdn.supersaas.net/en/but/book_now_red.png']
 ```
 
 The shortcode takes the following optional arguments.
@@ -23,4 +25,4 @@ The shortcode takes the following optional arguments.
 * `label` - The button label. This defaults to “Book Now” or its equivalent in the supported languages. If the button has a background image, this will be the *alternate* text value.
 * `image` - The URL of the background image. This has no default value. So, the button will not have a background image, if this isn’t configured.
 
-For further details of the SuperSaaS WordPress plugin see also the *readme.txt* file.
+For further details of the SuperSaaS WordPress plugin see also the **readme.txt** file.
