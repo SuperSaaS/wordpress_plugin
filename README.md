@@ -16,7 +16,7 @@ Once installed you can add a button to your pages by placing the *supersaas* sho
 ```
 * A custom button example:
 ```
-[supersaas after=booking_system label="Book Here!" image='http://cdn.supersaas.net/en/but/book_now_red.png']
+[supersaas after=schedule_name label="Book Here!" image='http://cdn.supersaas.net/en/but/book_now_red.png']
 ```
 
 The shortcode takes the following optional arguments.
