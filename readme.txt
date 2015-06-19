@@ -68,3 +68,7 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 1.8 =
 * Improved coding style
 * Custom domain name accepts also URLs
+
+= 1.9 =
+* Updated the translations and the README
+
