@@ -69,5 +69,5 @@ msgid "If you created a custom domain name that points to SuperSaaS enter it her
 msgstr "Als u een eigen domeinnaam naar SuperSaaS laat wijzen voer die dan hier in"
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
-msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Uw gebruikersnaam is een door SuperSaaS gereserveerd woord. Mogelijk kunt u niet inloggen. Wilt u doorgaan?"
 

@@ -42,7 +42,7 @@ msgid "The password for the administrator of your SuperSaaS account."
 msgstr "Heslo k Vašemu administrátorskému ůčtu v SuperSaaS"
 
 msgid "Schedule name"
-msgstr "Jméno Vašeho rozvrhu"
+msgstr "Název rozvrhu"
 
 msgid "The name of the schedule or URL to redirect to after login."
 msgstr "Jméno Vašeho rozvrhu nebo jeho celé URL"
@@ -63,10 +63,10 @@ msgid "Location of an image file to use as the button. Can be left blank."
 msgstr "Umístění obrázku použitého jako tlačítko. Může zůstat prázdné."
 
 msgid "Custom domain name"
-msgstr "Vaše doména"
+msgstr "Název vaší domény"
 
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
 msgstr "Pokud jste si nastavili pro rezervační systém vaši vlastní doménu , vložte její název sem. Může zůstat prázdné"
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
-msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Použité uživatelské jméno je zabrané pro supersaas. Nebude možné se s ním přihlásit. Chcete pokračovat?"

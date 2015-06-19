@@ -63,11 +63,11 @@ msgid "Location of an image file to use as the button. Can be left blank."
 msgstr "Placering for billede filen, som bruges på knappen"
 
 msgid "Custom domain name"
-msgstr "Skræddersy domæne navn"
+msgstr "Skræddersyet domæne navn"
 
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
 msgstr "Hvis du ændrede URL til dit eget domæne navn, som skal pege på SuperSaaS, indtaster du det her"
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
-msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Dit brugernavn er et af SuperSaaS reserveret ord. Derfor kan du måske ikke logge ind. Ønsker du at fortsætte?"
 

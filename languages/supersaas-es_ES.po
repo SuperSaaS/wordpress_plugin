@@ -42,7 +42,7 @@ msgid "The password for the administrator of your SuperSaaS account."
 msgstr "La contraseña del administrador de su cuenta SuperSaaS"
 
 msgid "Schedule name"
-msgstr "Nombre del horario"
+msgstr "Nombre de horario"
 
 msgid "The name of the schedule or URL to redirect to after login."
 msgstr "El nombre del horario o la URL para redirigir después de entrar"
@@ -69,5 +69,5 @@ msgid "If you created a custom domain name that points to SuperSaaS enter it her
 msgstr "Si usted ha creado un dominio personalizado en SuperSaaS, introdúzcalo aquí"
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
-msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Su nombre de usuario es una palabra reservada de SuperSaaS. Puede ser que no pueda entrar con ese nombre. Quiere continuar?"
 
