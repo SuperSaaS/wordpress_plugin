@@ -1,10 +1,10 @@
 === SuperSaaS - online appointment scheduling ===
 Contributors: supersaas
 Donate link: http://www.supersaas.com/
-Tags: appointments, schedule, scheduling, booking, calendar, agenda
+Tags: appointments, schedule, scheduling, booking, calendar, agenda, reservation, book appointment, book meetings, appointment calendar, appointment scheduling, reservation, online scheduling, online schedule, online meetings, reservation system, booking system, scheduling system, scheduling software, appointment software
 Requires at least: 2.7
-Tested up to: 4.2.2
-Stable tag: 1.8
+Tested up to: 4.6
+Stable tag: 1.9.1
 License: GPLv2
 
 SuperSaaS is a flexible appointment scheduling system that works with many different businesses. The basic version is free.
@@ -70,5 +70,7 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 * Custom domain name accepts also URLs
 
 = 1.9 =
-* Updated the translations and the README
+* Tested latest WordPress version
 
+= 1.9.1 =
+* Update translation
