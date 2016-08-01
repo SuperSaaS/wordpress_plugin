@@ -26,7 +26,7 @@ This section describes how to install the plugin and get it working.
 1. Download and unzip the plugin and upload it to the `/wp-content/plugins/` directory, or use the automatic plugin installer
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Place the short code [supersaas] on your pages everywhere you want the button to appear.
-1. Modify the SuperSaaS account to work with WordPress by following the [installation instructions](http://www.supersaas.com/tutorials/wordpress_appointment_scheduling) on the SuperSaaS site.
+1. Modify the SuperSaaS account to work with WordPress by following the [installation instructions](http://www.supersaas.com/info/doc/integration/wordpress_integration) on the SuperSaaS site.
 
 == Frequently Asked Questions ==
 
@@ -39,7 +39,7 @@ Make sure you follow the [installation instructions](http://www.supersaas.com/in
 1. **Class and Events Bookings** - Example of a SuperSaaS appointment schedule
 2. **One-on-One Appointments** - For example used by home rentals, therapists, coaches or driving lessons
 3. **SuperSaaS Dashboard** - Many configuration options available
-4. **Wordpress Plugin** - Configure the SuperSaaS Wordpress plugin, see also the tutorial section <a href="http://www.supersaas.com">tutorials</a>
+4. **Wordpress Plugin** - Configure the SuperSaaS Wordpress plugin, see also the tutorial section <a href="http://www.supersaas.com/info/doc/integration/wordpress_integration">tutorials</a>
 
 == Languages ==
 
@@ -60,8 +60,6 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 1.7 =
 * More localizations
 
-== Upgrade Notice ==
-
 = 1.7 =
 * More localizations
 
@@ -71,6 +69,11 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 
 = 1.9 =
 * Tested latest WordPress version
+
+= 1.9.1 =
+* Update translation
+
+== Upgrade Notice ==
 
 = 1.9.1 =
 * Update translation
