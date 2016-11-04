@@ -87,7 +87,6 @@ function supersaas_options() {
 		<tr valign="top">
 			<th scope="row">
 				<?php _e( 'Schedule name', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?>
-				<em>(<?php _e( 'optional', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?>)</em>
 			</th>
 			<td>
 				<input type="text" name="ss_schedule" value="<?php echo get_option( 'ss_schedule' ); // WPCS: XSS.EscapeOutput OK. ?>" /><br />
