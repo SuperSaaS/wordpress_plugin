@@ -73,7 +73,10 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 1.9.1 =
 * Update translation
 
+= 1.9.2 =
+* Mark schedule name as non-optional
+
 == Upgrade Notice ==
 
-= 1.9.1 =
-* Update translation
+= 1.9.2 =
+* Mark schedule name as non-optional
