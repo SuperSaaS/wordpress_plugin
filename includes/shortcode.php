@@ -37,13 +37,14 @@ function supersaas_button_hook( $atts ) {
 
 		$domain = get_option( 'ss_domain' );
 		$user_login = $current_user->user_login;
+		$protocol = $_SERVER['HTTPS'] == 'on' || $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://';
 
 		if ( ! $domain ) {
-			$api_endpoint = 'https://' . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
+			$api_endpoint = $protocol . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
 		} elseif ( filter_var( $domain, FILTER_VALIDATE_URL ) ) {
 			$api_endpoint = rtrim( $domain, '/' ) . '/api/users';
 		} else {
-			$api_endpoint = 'http://' . rtrim( $domain, '/' ) . '/api/users';
+			$api_endpoint = $protocol . rtrim( $domain, '/' ) . '/api/users';
 		}
 
 		$account = str_replace( ' ', '_', $account );
