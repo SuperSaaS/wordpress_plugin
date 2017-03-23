@@ -39,7 +39,7 @@ function supersaas_button_hook( $atts ) {
 		$user_login = $current_user->user_login;
 
 		if ( ! $domain ) {
-			$api_endpoint = 'http://' . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
+			$api_endpoint = 'https://' . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
 		} elseif ( filter_var( $domain, FILTER_VALIDATE_URL ) ) {
 			$api_endpoint = rtrim( $domain, '/' ) . '/api/users';
 		} else {
