@@ -4,7 +4,7 @@ Donate link: http://www.supersaas.com/
 Tags: appointments, schedule, scheduling, booking, calendar, agenda, reservation, book appointment, book meetings, appointment calendar, appointment scheduling, reservation, online scheduling, online schedule, online meetings, reservation system, booking system, scheduling system, scheduling software, appointment software
 Requires at least: 2.7
 Tested up to: 4.7
-Stable tag: 1.9.5
+Stable tag: 1.9.6
 License: GPLv2
 
 SuperSaaS is a flexible appointment scheduling system that works with many different businesses. The basic version is free.
@@ -85,7 +85,10 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 1.9.5 =
 * Dynamically detect request protocol, it will work even with proxy TLS termination
 
+= 1.9.6 =
+* Dynamically detect request protocol during url validation
+
 == Upgrade Notice ==
 
-= 1.9.5 =
-* Dynamically detect request protocol, it will work even with proxy TLS termination
+= 1.9.6 =
+* Dynamically detect request protocol during url validation
