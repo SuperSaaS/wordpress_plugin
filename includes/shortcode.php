@@ -42,7 +42,7 @@ function supersaas_button_hook( $atts ) {
 		if ( ! $domain ) {
 			$api_endpoint = $protocol . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
 		} elseif ( filter_var( $domain, FILTER_VALIDATE_URL ) ) {
-			$api_endpoint = $protocol . rtrim( $domain, '/' ) . '/api/users';
+			$api_endpoint = rtrim( $domain, '/' ) . '/api/users';
 		} else {
 			$api_endpoint = $protocol . rtrim( $domain, '/' ) . '/api/users';
 		}
