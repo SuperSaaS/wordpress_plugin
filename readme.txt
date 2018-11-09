@@ -85,11 +85,6 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 1.9.5 =
 * Dynamically detect request protocol, it will work even with proxy TLS termination
 
-== Upgrade Notice ==
-
-= 1.9.5 =
-* Dynamically detect request protocol, it will work even with proxy TLS termination
-
 = 1.9.6 =
 * Tested latest WordPress version
 
