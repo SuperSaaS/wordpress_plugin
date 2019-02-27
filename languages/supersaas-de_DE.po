@@ -35,10 +35,10 @@ msgstr "SuperSaaS Accountname"
 msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
 msgstr "Der Name Ihres Supersaasaccounts. Wenn Sie noch keinen Accountnamen haben sollten Sie jetzt auf Supersaas.de einen Account anlegen."
 
-msgid "SuperSaaS password"
+msgid "SuperSaaS API Key"
 msgstr "SuperSaaS Kennwort"
 
-msgid "The password for the administrator of your SuperSaaS account."
+msgid "The API key for your SuperSaaS account."
 msgstr "Das Kennwort für den Administrator für Ihren Supersaasaccount"
 
 msgid "Schedule name"

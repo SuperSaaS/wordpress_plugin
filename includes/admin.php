@@ -19,7 +19,7 @@ function supersaas_add_admin_menu() {
  */
 function supersaas_register_settings() {
 	register_setting( 'supersaas-settings', 'ss_account_name' );
-	register_setting( 'supersaas-settings', 'ss_password' );
+	register_setting( 'supersaas-settings', 'ss_password' ); // NOTE: this is an API KEY, not a user password; the "ss_password" key is used for backwards compatibility
 	register_setting( 'supersaas-settings', 'ss_schedule' );
 	register_setting( 'supersaas-settings', 'ss_button_label' );
 	register_setting( 'supersaas-settings', 'ss_button_image' );
@@ -75,12 +75,12 @@ function supersaas_options() {
 
 		<tr valign="top">
 			<th scope="row">
-				<?php _e( 'SuperSaaS password', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?>
+				<?php _e( 'SuperSaaS API Key', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?>
 				<em>*</em>
 			</th>
 			<td>
-				<input type="password" name="ss_password" value="<?php echo get_option( 'ss_password' ); // WPCS: XSS.EscapeOutput OK. ?>" required /><br />
-		 		<span class='description'><?php _e( 'The password for the administrator of your SuperSaaS account.', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?></span>
+				<input type="text" name="ss_password" value="<?php echo get_option( 'ss_password' ); // WPCS: XSS.EscapeOutput OK. ?>" required /><br />
+		 		<span class='description'><?php _e( 'The API key for your SuperSaaS account.', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?></span>
 			</td>
 		</tr>
 

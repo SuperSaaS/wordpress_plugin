@@ -28,9 +28,9 @@ function supersaas_button_hook( $atts ) {
 	));
 
 	$account = get_option( 'ss_account_name' );
-	$password = get_option( 'ss_password' );
+	$api_key = get_option( 'ss_password' );
 
-	if ( $account && $password && $after ) {
+	if ( $account && $api_key && $after ) {
 		if ( ! $label ) {
 			$label = __( 'Book Now!', 'supersaas' );
 		}
@@ -54,7 +54,7 @@ function supersaas_button_hook( $atts ) {
 		$out .= '<input type="hidden" name="user[name]" value="' . htmlspecialchars( $user_login ) . '"/>';
 		$out .= '<input type="hidden" name="user[full_name]" value="' . htmlspecialchars( $current_user->user_firstname . ' ' . $current_user->user_lastname ) . '"/>';
 		$out .= '<input type="hidden" name="user[email]" value="' . htmlspecialchars( $current_user->user_email ) . '"/>';
-		$out .= '<input type="hidden" name="checksum" value="' . md5( "$account$password$user_login" ) . '"/>';
+		$out .= '<input type="hidden" name="checksum" value="' . md5( "$account$api_key$user_login" ) . '"/>';
 		$out .= '<input type="hidden" name="after" value="' . htmlspecialchars( str_replace( ' ', '_', $after ) ) . '"/>';
 
 		if ( $image ) {
