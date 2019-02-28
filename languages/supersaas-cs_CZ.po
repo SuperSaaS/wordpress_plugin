@@ -35,10 +35,10 @@ msgstr "název účtu v SuperSaaS "
 msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
 msgstr "Název Vašeho účtu v SuperSaaS, pokud ještě účet v SuperSaaS nemáte vytvořte si jej na www.supersaas.cz"
 
-msgid "SuperSaaS password"
+msgid "SuperSaaS API Key"
 msgstr "SuperSaaS heslo"
 
-msgid "The password for the administrator of your SuperSaaS account."
+msgid "The API key for your SuperSaaS account."
 msgstr "Heslo k Vašemu administrátorskému ůčtu v SuperSaaS"
 
 msgid "Schedule name"

@@ -35,11 +35,11 @@ msgstr "SuperSaaS accountnaam"
 msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
 msgstr "De gebruikersnaam van uw SuperSaaS account. Als u geen gebruikersnaam heeft moet u deze eerst aanmaken op supersaas.nl"
 
-msgid "SuperSaaS password"
-msgstr "SuperSaaS wachtwoord"
+msgid "SuperSaaS API Key"
+msgstr "SuperSaaS API key"
 
-msgid "The password for the administrator of your SuperSaaS account."
-msgstr "Het wachtwoord van de beheerder van het SuperSaaS account"
+msgid "The API key for your SuperSaaS account."
+msgstr "De API sleutel van de pagina Toegangsbeheer in het SuperSaaS account"
 
 msgid "Schedule name"
 msgstr "Agendanaam"
