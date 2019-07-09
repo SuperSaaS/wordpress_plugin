@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  */
 function supersaas_button_hook( $atts ) {
 	global $current_user;
-	get_currentuserinfo();
+	wp_get_current_user();
 	if ( ! $current_user->ID ) {
 		return '';
 	}
@@ -37,7 +37,7 @@ function supersaas_button_hook( $atts ) {
 
 		$domain = get_option( 'ss_domain' );
 		$user_login = $current_user->user_login;
-		$protocol = $_SERVER['HTTPS'] == 'on' || $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://';
+		$protocol = isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' || isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://';
 
 		if ( ! $domain ) {
 			$api_endpoint = $protocol . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
