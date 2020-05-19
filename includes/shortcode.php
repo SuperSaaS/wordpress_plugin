@@ -40,7 +40,7 @@ function supersaas_button_hook( $atts ) {
 		$protocol = isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' || isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://';
 
 		if ( ! $domain ) {
-			$api_endpoint = $protocol . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
+			$api_endpoint = 'https://' . __( 'www.supersaas.com', 'supersaas' ) . '/api/users';
 		} elseif ( filter_var( $domain, FILTER_VALIDATE_URL ) ) {
 			$api_endpoint = rtrim( $domain, '/' ) . '/api/users';
 		} else {
