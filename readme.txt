@@ -106,7 +106,10 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 2.0.3 =
 * Forces the button to use https for customers still using http sites
 
+= 2.0.4 =
+* Tested latest WordPress version 5.6
+
 == Upgrade Notice ==
 
-= 2.0.3 =
-* Forces the button to use https for customers still using http sites
+= 2.0.4 =
+* Tested latest WordPress version 5.6
