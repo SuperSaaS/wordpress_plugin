@@ -109,7 +109,10 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 = 2.0.4 =
 * Tested latest WordPress version 5.6
 
+= 2.0.5 =
+* Tested latest WordPress version 5.8
+
 == Upgrade Notice ==
 
-= 2.0.4 =
-* Tested latest WordPress version 5.6
+= 2.0.5 =
+* Tested latest WordPress version 5.8
