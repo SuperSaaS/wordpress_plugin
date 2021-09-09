@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: http://www.supersaas.de/info/contact\n"
 "POT-Creation-Date: 2010-05-29 21:43+0200\n"
-"PO-Revision-Date:  2010-05-29 21:43+0200\n"
+"PO-Revision-Date:  2021-09-09 11:28+0200\n"
 "Last-Translator: SuperSaaS <service@supersaas.de>\n"
 "Language-Team: SuperSaaS <supersaas@supersaas.com>\n"
 "MIME-Version: 1.0\n"
@@ -15,59 +15,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "Dieses Modul zeigt eine &quot;Jetzt Buchen&quot; Taste die den Nutzer automatisch bei Supersaas einlogt über seine WordPress Nutzerkennung. Das Modul übergibt die Nutzerdaten und generiert oder aktualisiert dabei die für Supersaas eigestellte notwendige Daten. Dies macht eine wiederholte Anmeldung überflüssig. Das Modul funktioniert sowohl mit der bezahlten Supersaasversion als auch mit der Gratisversion."
+msgstr "Dieses Modul zeigt einen 'Jetzt Buchen' Button. Wenn der Benutzer auf den Button klickt, wird er mit seinem WordPress-Benutzernamen automatisch bei einem Terminbuchungskalender bei SuperSaaS eingeloggt. Das Modul gibt die Daten des Benutzers weiter und erstellt oder aktualisiert die Informationen des Benutzers auf SuperSaaS nach Bedarf. Dadurch müssen sich Benutzer nicht zweimal anmelden. Das Modul funktioniert sowohl mit der kostenlosen, als auch mit der kostenpflichtigen Version von SuperSaaS."
 
 msgid "Book Now!"
-msgstr "Buche jetzt"
+msgstr "Jetzt buchen!"
 
 msgid "www.supersaas.com"
-msgstr "www.supersaas.nl"
+msgstr "www.supersaas.de"
 
 msgid "(Setup incomplete)"
-msgstr "(Modulsetup unvolständig)"
+msgstr "(Modul-Einrichtung unvollständig)"
 
 msgid "SuperSaaS Settings"
 msgstr "SuperSaaS Einstellungen"
 
 msgid "SuperSaaS account name"
-msgstr "SuperSaaS Accountname"
+msgstr "SuperSaaS Kontoname"
 
 msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
-msgstr "Der Name Ihres Supersaasaccounts. Wenn Sie noch keinen Accountnamen haben sollten Sie jetzt auf Supersaas.de einen Account anlegen."
+msgstr "Der Name Ihres SuperSaaS-Kontos. Wenn Sie noch keinen Kontonamen haben, sollten Sie jetzt auf supersaas.de ein Konto anlegen."
 
 msgid "SuperSaaS API Key"
-msgstr "SuperSaaS Kennwort"
+msgstr "SuperSaaS API Schlüssel"
 
 msgid "The API key for your SuperSaaS account."
-msgstr "Das Kennwort für den Administrator für Ihren Supersaasaccount"
+msgstr "Der API Schlüssel für Ihr SuperSaaS-Konto."
 
 msgid "Schedule name"
-msgstr "Name des Zeitplans"
+msgstr "Name vom Terminbuchungskalender"
 
 msgid "The name of the schedule or URL to redirect to after login."
-msgstr "Der Name des Zeitplans oder URL zum Weiterleiten nach dem Login"
+msgstr "Der Name vom Terminbuchungskalender oder die URL wohin der Button nach dem Login weiterleiten soll."
 
 msgid "Button Label"
-msgstr "Button label"
+msgstr "Button Label"
 
 msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
-msgstr "Der Text der auf der Taste gezeigt werden soll. Zum Beispiel &quot;Termin Vereinbaren&quot;"
+msgstr "Der Text, der auf dem Button gezeigt werden soll, beispielsweise 'Termin vereinbaren'."
 
 msgid "Button Image"
-msgstr "Tastengrafik"
+msgstr "Button Grafik"
 
 msgid "optional"
 msgstr "optional"
 
 msgid "Location of an image file to use as the button. Can be left blank."
-msgstr "Speicherort für die Grafikdatei die als Tastendarstellung benutzt werden soll"
+msgstr "Speicherort für die Grafikdatei, die als Darstellung für den Button benutzt werden soll. Setzen Sie eine URL ein, die zum Bild führt. Feld kann leer bleiben."
 
 msgid "Custom domain name"
-msgstr "Custom Domain-Namen"
+msgstr "Custom Domain-Name"
 
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
-msgstr "Wenn Sie einen Custom Domain-Namen eigerichtet haben der auf Supersaas zeigt fügen Sie den hier ein"
+msgstr "Wenn Sie einen Custom Domain-Namen eigerichtet haben, der auf SuperSaaS zeigt, fügen Sie den hier ein. Feld kann leer bleiben."
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
-msgstr "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgstr "Ihr Benutzername ist für SuperSaaS reserviert. Sie können sich damit vielleicht nicht einloggen. Möchten Sie weiter fortfahren?"
 
