@@ -32,6 +32,25 @@ function supersaas_button_hook( $atts ) {
 	$display_choice = get_option( 'ss_display_choice' );
     $widget_script = get_option( 'ss_widget_script' );
 
+    $pattern = "/(?<=\")[0-9]+:\w+(?=\")/i";
+    preg_match_all($pattern, $widget_script, $matches); // Outputs 1
+
+    if($display_choice === 'popup_btn') {
+        $out = '<div>';
+        foreach ($matches as &$match_value) {
+            $out .= 'test';
+            foreach ($match_value as &$submatch_value) {
+                list($id, $name) = explode(':', $submatch_value);
+                $out .= '<p>';
+                $out .= 'extracted id: ' . $id . ' extracted name: ' . $name;
+                $out .= '</p>';
+            }
+        }
+        $out .= '<p>' . $schedule_id . '</p>';
+
+        $out .= '</div>';
+    }
+
     if($display_choice === 'regular_btn') {
         if ( $account && $api_key && $after ) {
         	if ( ! $label ) {
@@ -73,10 +92,6 @@ function supersaas_button_hook( $atts ) {
         } else {
         	$out = __( '(Setup incomplete)', 'supersaas' );
         }
-    }
-
-    if($display_choice === 'popup_btn') {
-        $out = $widget_script;
     }
 
 	return $out;
