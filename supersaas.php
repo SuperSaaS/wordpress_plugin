@@ -64,4 +64,5 @@ add_shortcode( 'supersaas', 'supersaas_button_hook' );
  * Add the SuperSaaS admin menu and register the SuperSaaS options.
  */
 add_action( 'admin_menu', 'supersaas_add_admin_menu' );
+add_action( 'admin_enqueue_scripts', 'supersaas_register_assets' );
 add_action( 'admin_init', 'supersaas_register_settings' );

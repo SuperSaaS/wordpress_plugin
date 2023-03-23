@@ -33,6 +33,18 @@ function supersaas_register_settings()
 }
 
 /**
+ * Register JS for page
+ *
+ * @uses "admin_enqueue_scripts" action
+ */
+function supersaas_register_assets()
+{
+  wp_register_script("supersaas_custom_js_script", plugin_dir_url(__FILE__) . 'js/admin.js', array('jquery'), null);
+  wp_enqueue_script( 'supersaas_custom_js_script' );
+}
+
+
+/**
  * Sanitizes the custom domain settings field.
  *
  * @param string $ss_domain The value of the custom domain.
@@ -86,21 +98,13 @@ function supersaas_options()
       </p>
 
       <fieldset>
-        <legend class="screen-reader-text"><span>Your homepage displays</span></legend>
+        <legend class="screen-reader-text"><span>SuperSaaS schedule displays</span></legend>
         <p>
           <label>
             <input name="ss_display_choice" type="radio" value="regular_btn"
                    class="tog" <?php echo get_option('ss_display_choice') === 'regular_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.
             ?> />
             Show a button that forwards the user to my SuperSaaS calendar
-          </label>
-        </p>
-        <p>
-          <label>
-            <input name="ss_display_choice" type="radio" value="frame"
-                   class="tog" <?php echo get_option('ss_display_choice') === 'frame' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.
-            ?> />
-            Show the calendar inside a small frame on my Wordpress site
           </label>
         </p>
         <p>
