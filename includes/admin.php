@@ -24,6 +24,7 @@ function supersaas_register_settings() {
 	register_setting( 'supersaas-settings', 'ss_password' ); // NOTE: this is an API KEY, not a user password; the "ss_password" key is used for backwards compatibility
 	register_setting( 'supersaas-settings', 'ss_widget_script' ); // new
 
+    register_setting( 'supersaas-settings', 'ss_schedule' );
 	register_setting( 'supersaas-settings', 'ss_button_label' );
 	register_setting( 'supersaas-settings', 'ss_button_image' );
 	register_setting( 'supersaas-settings', 'ss_domain', 'domain_from_url' );
@@ -118,6 +119,15 @@ function supersaas_options() {
     </p>
 
 	<table class="form-table">
+        <tr valign="top">
+            <th scope="row">
+                <?php _e( 'Schedule name', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?>
+            </th>
+            <td>
+                <input type="text" name="ss_schedule" value="<?php echo get_option( 'ss_schedule' ); // WPCS: XSS.EscapeOutput OK. ?>" /><br />
+                <span class='description'><?php _e( 'The name of the schedule or URL to redirect to after login.', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?></span>
+            </td>
+        </tr>
 		<tr valign="top">
 			<th scope="row">
 				<?php _e( 'Button Label', 'supersaas' ); // WPCS: XSS.EscapeOutput OK. ?>

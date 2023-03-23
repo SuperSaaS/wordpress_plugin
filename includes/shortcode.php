@@ -23,7 +23,8 @@ function supersaas_button_hook( $atts ) {
 		array(
 			'label' => get_option( 'ss_button_label', '' ),
 			'image' => get_option( 'ss_button_image', '' ),
-			'after' => get_option( 'ss_schedule', '' ),
+			'after' => '',
+			'schedule' => '',
 		), $atts, 'supersaas'
 	));
 
@@ -31,24 +32,41 @@ function supersaas_button_hook( $atts ) {
 	$api_key = get_option( 'ss_password' );
 	$display_choice = get_option( 'ss_display_choice' );
     $widget_script = get_option( 'ss_widget_script' );
+    $default_schedule = get_option( 'ss_schedule');
 
     $pattern = "/(?<=\")[0-9]+:\w+(?=\")/i";
-    preg_match_all($pattern, $widget_script, $matches); // Outputs 1
+    preg_match_all($pattern, $widget_script, $matches);
 
     if($display_choice === 'popup_btn') {
         $out = '<div>';
         foreach ($matches as &$match_value) {
-            $out .= 'test';
             foreach ($match_value as &$submatch_value) {
-                list($id, $name) = explode(':', $submatch_value);
                 $out .= '<p>';
+                list($id, $name) = explode(':', $submatch_value);
+                if($name !== $account) {
+                    if(!empty($after)) {
+                        $out .= '<p> ' . '$after: ' . $after . '</p>';
+                        $widget_script = str_replace($submatch_value, $after, $widget_script);
+                        $widget_script = str_replace($id, $after, $widget_script);
+                    }
+                    if(!empty($schedule)) {
+                        $out .= '<p> ' . '$schedule: ' . $schedule . '</p>';
+                        $widget_script = str_replace($submatch_value, $schedule, $widget_script);
+                        $widget_script = str_replace($id, $after, $widget_script);
+                    }
+                }
                 $out .= 'extracted id: ' . $id . ' extracted name: ' . $name;
                 $out .= '</p>';
             }
         }
-        $out .= '<p>' . $schedule_id . '</p>';
-
         $out .= '</div>';
+        $out .= $widget_script;
+    }
+
+    if(empty($after)) {
+        // Can't replace $after in case of $display_choice === 'popup_btn' since
+        //  whether its provided is a part of the display logic for the popup
+        $after = $default_schedule;
     }
 
     if($display_choice === 'regular_btn') {
