@@ -181,7 +181,7 @@ function supersaas_options()
           </td>
         </tr>
 
-        <tr>
+        <tr id="ss_domain" class="<?php echo get_option('ss_display_choice') === 'popup_btn' ? 'hidden' : '' ?>">
           <th scope="row">
             <?php _e('Custom domain name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
             <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>)</em>
