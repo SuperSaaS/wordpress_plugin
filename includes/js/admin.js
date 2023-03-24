@@ -1,14 +1,20 @@
 jQuery(function ($) {
-  console.log($("input[name=ss_display_choice]"));
+  // Toggle widget script setting depending on display choice
   $("input[name=ss_display_choice]").on("click", function (e) {
-      if(e.target.value === "regular_btn") {
-          console.log("clicked on regular btn")
-          $("textarea[name=ss_widget_script]").addClass("hidden")
-      }
+    switch (e.target.value) {
+      case("regular_btn"):
+        $("#ss_widget_script").addClass("hidden"); break;
+      case("popup_btn"):
+        $("#ss_widget_script").removeClass("hidden"); break;
+    }
+  })
 
-      if(e.target.value === "popup_btn") {
-          console.log("clicked on popup btn")
-          $("textarea[name=ss_widget_script]").removeClass("hidden")
-      }
+  // Toggle SuperSaaS api key setting depending on autologin choice
+  $("input[name=ss_autologin_enabled]").on("click", function (e) {
+    if (e.target.checked) {
+      $("#ss_password").removeClass("hidden")
+    } else {
+      $("#ss_password").addClass("hidden")
+    }
   })
 });
