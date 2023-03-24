@@ -46,17 +46,17 @@ function supersaas_button_hook($atts)
         list($id, $name) = explode(':', $submatch_value);
         if ($name !== $account) {
           if (!empty($after)) {
-            $out .= '<p> ' . '$after: ' . $after . '</p>';
+            // $out .= '<p> ' . '$after: ' . $after . '</p>';
             $widget_script = str_replace($submatch_value, $after, $widget_script);
             $widget_script = str_replace($id, $after, $widget_script);
           }
           if (!empty($schedule)) {
-            $out .= '<p> ' . '$schedule: ' . $schedule . '</p>';
+            // $out .= '<p> ' . '$schedule: ' . $schedule . '</p>';
             $widget_script = str_replace($submatch_value, $schedule, $widget_script);
             $widget_script = str_replace($id, $after, $widget_script);
           }
         }
-        $out .= 'extracted id: ' . $id . ' extracted name: ' . $name;
+        // $out .= 'extracted id: ' . $id . ' extracted name: ' . $name;
         $out .= '</p>';
       }
     }
