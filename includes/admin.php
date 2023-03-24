@@ -103,16 +103,16 @@ function supersaas_options()
         <div>
           <label>
             <input name="ss_display_choice" type="radio" value="regular_btn"
-                   class="tog" <?php echo get_option('ss_display_choice') === 'regular_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.
-            ?> />
+                   class="tog" <?php echo get_option('ss_display_choice') === 'regular_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
+            />
             Show a button that forwards the user to my SuperSaaS calendar
           </label>
         </div>
         <div>
           <label>
             <input name="ss_display_choice" type="radio" value="popup_btn"
-                   class="tog" <?php echo get_option('ss_display_choice') === 'popup_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.
-            ?> />
+                   class="tog" <?php echo get_option('ss_display_choice') === 'popup_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
+            />
             Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site
           </label>
         </div>
@@ -124,7 +124,7 @@ function supersaas_options()
                  value="1"
                  <?php echo get_option('ss_autologin_enabled') === '1' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
           />
-          If the user is logged into Wordpress, log him into your SuperSaaS account with the Wordpress user name
+          If the user is logged into WordPress, log him into your SuperSaaS account with the WordPress user name
         </label>
 
         <br/>
@@ -143,76 +143,65 @@ function supersaas_options()
       </p>
 
       <table class="form-table">
-        <tr valign="top">
+        <tr>
           <th scope="row">
-            <?php _e('Schedule name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-            ?>
+            <?php _e('Schedule name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
           </th>
           <td>
             <input type="text" name="ss_schedule"
-                   value="<?php echo get_option('ss_schedule'); // WPCS: XSS.EscapeOutput OK.
-                   ?>"/><br/>
-            <span
-                class='description'><?php _e('The default name of the schedule (can be overwritten in shortcode)', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?></span>
+                   value="<?php echo get_option('ss_schedule'); // WPCS: XSS.EscapeOutput OK.?>"
+            />
+            <br/>
+            <span class='description'>
+              <?php _e('The default name of the schedule (can be overwritten in shortcode)', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+            </span>
           </td>
         </tr>
-        <tr valign="top">
+        <tr id="ss_button_settings" class="<?php echo get_option('ss_display_choice') === 'popup_btn' ? 'hidden' : '' ?>">
           <th scope="row">
-            <?php _e('Button Label', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-            ?>
-            <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?>)</em>
+            Button Settings
+            <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>)</em>
           </th>
           <td>
             <input type="text" name="ss_button_label"
-                   value="<?php echo get_option('ss_button_label') ? get_option('ss_button_label') : __('Book Now!', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-                   ?>"/><br/>
-            <span
-                class='description'><?php _e("The text to be put on the button that is displayed, for example 'Create Appointment'.", 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?></span>
-          </td>
-        </tr>
-
-        <tr valign="top">
-          <th scope="row">
-            <?php _e('Button Image', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-            ?>
-            <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?>)</em>
-          </th>
-          <td>
+                   value="<?php echo get_option('ss_button_label') ? get_option('ss_button_label') : __('Book Now!', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>"
+            />
+            <br/>
+            <span class='description'>
+              <?php _e("The text to be put on the button that is displayed, for example 'Create Appointment'.", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+            </span>
+            <br/>
             <input type="text" name="ss_button_image"
-                   value="<?php echo get_option('ss_button_image'); // WPCS: XSS.EscapeOutput OK.
-                   ?>"/><br/>
-            <span
-                class='description'><?php _e('Location of an image file to use as the button. Can be left blank.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?></span>
+                   value="<?php echo get_option('ss_button_image'); // WPCS: XSS.EscapeOutput OK.?>"
+            />
+            <br/>
+            <span class='description'>
+              <?php _e('Location of an image file to use as the button. Can be left blank.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+            </span>
           </td>
         </tr>
 
-        <tr valign="top">
+        <tr>
           <th scope="row">
-            <?php _e('Custom domain name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-            ?>
-            <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?>)</em>
+            <?php _e('Custom domain name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+            <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>)</em>
           </th>
           <td>
             <input type="text" name="ss_domain"
-                   value="<?php echo get_option('ss_domain'); // WPCS: XSS.EscapeOutput OK.
-                   ?>"/><br/>
-            <span
-                class='description'><?php _e('If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.
-              ?></span>
+                   value="<?php echo get_option('ss_domain'); // WPCS: XSS.EscapeOutput OK.?>"
+            />
+            <br/>
+            <span class='description'>
+              <?php _e('If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+            </span>
           </td>
         </tr>
       </table>
 
       <p class="submit">
         <input type="submit" class="button-primary"
-               value="<?php _e('Save Changes'); // WPCS: XSS.EscapeOutput OK.
-               ?>"/>
+               value="<?php _e('Save Changes'); // WPCS: XSS.EscapeOutput OK.?>"
+        />
       </p>
     </form>
   </div>

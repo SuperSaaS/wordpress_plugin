@@ -3,9 +3,13 @@ jQuery(function ($) {
   $("input[name=ss_display_choice]").on("click", function (e) {
     switch (e.target.value) {
       case("regular_btn"):
-        $("#ss_widget_script").addClass("hidden"); break;
+        $("#ss_widget_script").addClass("hidden");
+        $("#ss_button_settings").removeClass("hidden");
+        break;
       case("popup_btn"):
-        $("#ss_widget_script").removeClass("hidden"); break;
+        $("#ss_widget_script").removeClass("hidden");
+        $("#ss_button_settings").addClass("hidden");
+        break;
     }
   })
 
@@ -17,4 +21,5 @@ jQuery(function ($) {
       $("#ss_password").addClass("hidden")
     }
   })
+
 });
