@@ -53,8 +53,14 @@ function supersaas_button_hook($atts)
           if (!empty($schedule)) {
             // $out .= '<p> ' . '$schedule: ' . $schedule . '</p>';
             $widget_script = str_replace($submatch_value, $schedule, $widget_script);
-            $widget_script = str_replace($id, $after, $widget_script);
+            $widget_script = str_replace($id, $schedule, $widget_script);
           }
+          if(empty($schedule) && empty($after) && !empty($default_schedule)) {
+            $widget_script = str_replace($submatch_value, $default_schedule, $widget_script);
+            $widget_script = str_replace($id, $default_schedule, $widget_script);
+          }
+        } else {
+          $widget_script = str_replace($submatch_value, $name, $widget_script);
         }
         // $out .= 'extracted id: ' . $id . ' extracted name: ' . $name;
         $out .= '</p>';
