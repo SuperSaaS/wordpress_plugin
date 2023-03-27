@@ -4,12 +4,10 @@ jQuery(function ($) {
     switch (e.target.value) {
       case("regular_btn"):
         $("#ss_widget_script").addClass("hidden");
-        $("#ss_button_settings").removeClass("hidden");
         $("#ss_domain").removeClass("hidden");
         break;
       case("popup_btn"):
         $("#ss_widget_script").removeClass("hidden");
-        $("#ss_button_settings").addClass("hidden");
         $("#ss_domain").addClass("hidden");
         break;
     }
