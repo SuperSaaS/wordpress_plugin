@@ -33,10 +33,10 @@ function supersaas_button_hook($atts)
   $widget_script = get_option('ss_widget_script');
   $default_schedule = get_option('ss_schedule');
   $autologin_enabled = get_option('ss_autologin_enabled');
+	$out = '';
   // Sanitize options provided via shortcode
   $options = str_replace('\'', '"', $options);
 	$options_obj = json_decode($options);
-
 	if($options && !$options_obj) {
 		// Validate options provided via shortcode
 		$out .= "<p> Error occured while parsing options. Did you provide options json properly? <br/> ";
@@ -58,8 +58,6 @@ function supersaas_button_hook($atts)
 
 
   if ($display_choice === 'popup_btn') {
-	  $out = '';
-
 		if(!empty($final_schedule_name)) {
 			// Match and replace {account_id:account_name} with {account_name} to trigger behaviour where
 			//  schedule name can be passed without id
@@ -138,7 +136,7 @@ function supersaas_button_hook($atts)
       if ($current_user->ID && $autologin_enabled) {
 	      //  Generate a hidden form with user data
         $account = str_replace(' ', '_', $account);
-        $out = '<form method="post" action=' . $api_endpoint . '>';
+        $out .= '<form method="post" action=' . $api_endpoint . '>';
         $out .= '<input type="hidden" name="account" value="' . $account . '"/>';
         $out .= '<input type="hidden" name="id" value="' . $current_user->ID . 'fk"/>';
         $out .= '<input type="hidden" name="user[name]" value="' . htmlspecialchars($user_login) . '"/>';
@@ -167,7 +165,7 @@ function supersaas_button_hook($atts)
 	      }
       }
     } else {
-      $out = __('(Setup incomplete)', 'supersaas');
+      $out .= __('(Setup incomplete)', 'supersaas');
     }
   }
 
