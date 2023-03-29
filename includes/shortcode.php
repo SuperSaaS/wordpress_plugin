@@ -44,32 +44,21 @@ function supersaas_button_hook($atts)
 		return $out;
 	}
 
+	// Determine a final name of the schedule
+	$final_schedule_name = '';
+	if (!empty($after)) {
+		$final_schedule_name = $after;
+	}
+	if (!empty($schedule)) {
+		$final_schedule_name = $schedule;
+	}
+	if(empty($schedule) && empty($after) && !empty($default_schedule)) {
+		$final_schedule_name = $default_schedule;
+	}
+
 
   if ($display_choice === 'popup_btn') {
 	  $out = '';
-	  // Pattern that represents a sequence that specifies both account and schedule to display
-
-//	  $patterns = array();
-//	  $patterns[0] = '/(?<=SuperSaaS\(\")[0-9]+:\w+(?=\")/i'; // for account id:name (first arg)
-//		$patterns[1] = '/(?<=,\")[0-9]+:\w+(?=\")/i'; // for schedule id:name (second arg)
-//	  $patterns[2] = '/SuperSaaS\([\s\S]*\Knull/i'; // for null (as SuperSaaS arg)
-//
-//	  $replacements = array();
-//	  $replacements[2] = 'bear';
-//	  $replacements[1] = $after;
-//	  $replacements[0] = 'slow';
-
-		// Determine a name to inject
-	  $final_schedule_name = '';
-	  if (!empty($after)) {
-		  $final_schedule_name = $after;
-	  }
-	  if (!empty($schedule)) {
-		  $final_schedule_name = $schedule;
-	  }
-	  if(empty($schedule) && empty($after) && !empty($default_schedule)) {
-		  $final_schedule_name = $default_schedule;
-	  }
 
 		if(!empty($final_schedule_name)) {
 			// Match and replace {account_id:account_name} with {account_name} to trigger behaviour where
@@ -126,18 +115,8 @@ function supersaas_button_hook($atts)
     $out .= $widget_script;
   }
 
-  if (empty($after) && empty($schedule)) {
-    // Can't replace $after in case of $display_choice === 'popup_btn' since
-    //  whether its provided is a part of the display logic for the popup
-    $after = $default_schedule;
-  } else {
-    if (!empty($schedule)) {
-      $after = $schedule;
-    }
-  }
-
   if ($display_choice === 'regular_btn') {
-    if ($account && $api_key && $after) {
+    if ($account && $api_key) {
       if (!$label) {
         $label = __('Book Now!', 'supersaas');
       }
@@ -166,7 +145,7 @@ function supersaas_button_hook($atts)
         $out .= '<input type="hidden" name="user[full_name]" value="' . htmlspecialchars($current_user->user_firstname . ' ' . $current_user->user_lastname) . '"/>';
         $out .= '<input type="hidden" name="user[email]" value="' . htmlspecialchars($current_user->user_email) . '"/>';
         $out .= '<input type="hidden" name="checksum" value="' . md5("$account$api_key$user_login") . '"/>';
-        $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $after)) . '"/>';
+        $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $final_schedule_name)) . '"/>';
 
         if ($image) {
           $out .= '<input type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
@@ -180,7 +159,7 @@ function supersaas_button_hook($atts)
         $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
       } else {
         // Show a schedule button as simple link
-	      $href = "$api_domain/schedule/$account/$after";
+	      $href = "$api_domain/schedule/$account/$final_schedule_name";
 	      if ($image) {
 		      $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
 	      } else {
