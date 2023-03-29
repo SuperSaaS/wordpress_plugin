@@ -17,15 +17,15 @@ function supersaas_button_hook($atts)
   global $current_user;
   wp_get_current_user();
 
-  extract(shortcode_atts(
-    array(
-      'label' => get_option('ss_button_label', ''),
-      'image' => get_option('ss_button_image', ''),
-	    'options' => '',
-      'after' => '',
-      'schedule' => '',
-    ), $atts, 'supersaas'
-  ));
+	$defaults_array = array(
+		'label' => get_option('ss_button_label', ''),
+		'image' => get_option('ss_button_image', ''),
+		'options' => '',
+		'after' => '',
+		'schedule' => '',
+	);
+
+  extract(shortcode_atts( $defaults_array, $atts, 'supersaas'));
 
   $account = get_option('ss_account_name');
   $api_key = get_option('ss_password');
@@ -86,13 +86,20 @@ function supersaas_button_hook($atts)
 	  preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
 	  foreach ($widget_options_matches as &$match_value) {
 		  foreach ($match_value as &$submatch_value) {
+			  $default_options_obj = json_decode($submatch_value);
+				$options_final = array();
 			  if (!empty($options)) {
-					// Merge options provided in widget_script with options provided via shortcode
-					$default_options_obj = json_decode($submatch_value);
-					$obj_merged = array_merge((array) $default_options_obj, (array) $options_obj);
-					$options = json_encode($obj_merged);
-				  $widget_script = str_replace($submatch_value, $options, $widget_script);
+				  // Merge options provided in widget_script with options provided via shortcode
+				  $options_final = array_merge((array) $default_options_obj, (array) $options_obj);
 			  }
+			  foreach ($atts as $key => $value) {
+				  // Consider any non-recognized shortcode attribute key as an override to widget options
+				  if(!in_array($key, array_keys($defaults_array))) {
+					  $options_final[$key] = $value;
+				  }
+			  }
+			  $options = json_encode($options_final);
+			  $widget_script = str_replace($submatch_value, $options, $widget_script);
 		  }
 	  }
 
