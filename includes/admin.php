@@ -153,7 +153,8 @@ function supersaas_options()
             />
             <br/>
             <span class='description'>
-              <?php _e('The default name of the schedule (can be overwritten in shortcode)', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+              The default name of the schedule. <br/>
+              Leave blank for <a href="https://www.supersaas.com/accounts/access#account_list_schedules_1" target="_blank">default behaviour</a> (can be overwritten in shortcode)
             </span>
           </td>
         </tr>

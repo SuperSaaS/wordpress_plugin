@@ -78,8 +78,19 @@ function supersaas_button_hook($atts)
 				}
 			}
 
-			// Match and update schedule if null is provided
+			// Match and update schedule (when null is provided)
 			$widget_script = preg_replace("/SuperSaaS\([\s\S]*\Knull/i", "\"$final_schedule_name\"", $widget_script);
+		} else {
+			// When final schedule name is empty, trigger a default behaviour for `/schedule/{account_name}`
+			// which here basically mean - clean the schedule name from $widget_script if provided
+			preg_match_all("/(?<=,)\"[0-9]+:\w+\"/i", $widget_script, $id_matches);
+			foreach ($id_matches as &$match_value) {
+				foreach ($match_value as &$submatch_value) {
+					list($schedule_id, $name) = explode(':', $submatch_value);
+					$widget_script = str_replace($submatch_value, "null", $widget_script);
+					$widget_script = str_replace($schedule_id, "null", $widget_script);
+				}
+			}
 		}
 
 		// Match and override widget options
