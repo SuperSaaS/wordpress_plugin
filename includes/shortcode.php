@@ -35,13 +35,21 @@ function supersaas_button_hook($atts)
   $autologin_enabled = get_option('ss_autologin_enabled');
   // Sanitize options provided via shortcode
   $options = str_replace('\'', '"', $options);
-  // Pattern that represents a sequence that specifies both account and schedule to display
+	$options_obj = json_decode($options);
+
+	if($options && !$options_obj) {
+		// Validate options provided via shortcode
+		$out .= "<p> Error occured while parsing options. Did you provide options json properly? <br/> ";
+		$out .= "Example: <code> [supersaas options=\"{'menu':'show','view':'card'}\"] </code> </p>";
+		return $out;
+	}
+
 
   if ($display_choice === 'popup_btn') {
 	  $out = '';
-
-		// Match and update schedule
+	  // Pattern that represents a sequence that specifies both account and schedule to display
 	  preg_match_all("/(?<=\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
+	  // Match and update schedule
     foreach ($id_matches as &$match_value) {
       foreach ($match_value as &$submatch_value) {
         list($id, $name) = explode(':', $submatch_value);
@@ -68,6 +76,10 @@ function supersaas_button_hook($atts)
 	  foreach ($widget_options_matches as &$match_value) {
 		  foreach ($match_value as &$submatch_value) {
 			  if (!empty($options)) {
+					// Merge options provided in widget_script with options provided via shortcode
+					$default_options_obj = json_decode($submatch_value);
+					$obj_merged = array_merge((array) $default_options_obj, (array) $options_obj);
+					$options = json_encode($obj_merged);
 				  $widget_script = str_replace($submatch_value, $options, $widget_script);
 			  }
 		  }

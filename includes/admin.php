@@ -124,7 +124,7 @@ function supersaas_options()
                  value="1"
                  <?php echo get_option('ss_autologin_enabled') === '1' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
           />
-          If the user is logged into WordPress, log him into your SuperSaaS account with the WordPress user name
+          If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name
         </label>
 
         <br/>
