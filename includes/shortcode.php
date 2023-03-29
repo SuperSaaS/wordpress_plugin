@@ -56,7 +56,6 @@ function supersaas_button_hook($atts)
 		$final_schedule_name = $default_schedule;
 	}
 
-
   if ($display_choice === 'popup_btn') {
 		if(!empty($final_schedule_name)) {
 			// Match and replace {account_id:account_name} with {account_name} to trigger behaviour where
@@ -96,6 +95,10 @@ function supersaas_button_hook($atts)
 			  }
 		  }
 	  }
+
+		// Set button text if provided:
+	  $widget_script = preg_replace("/(?<=\>)[\w\d\s]*(?=\<\/button>)/i", $label, $widget_script);
+
 		// If autologin option enabled and current WP user is logged in:
     if($autologin_enabled && $current_user->ID) {
 	    // Populate required variables before initializing widget
