@@ -103,12 +103,15 @@ function supersaas_button_hook($atts)
 				  // Merge options provided in widget_script with options provided via shortcode
 				  $options_final = array_merge((array) $default_options_obj, (array) $options_obj);
 			  }
-			  foreach ($atts as $key => $value) {
-				  // Consider any non-recognized shortcode attribute key as an override to widget options
-				  if(!in_array($key, array_keys($defaults_array))) {
-					  $options_final[$key] = $value;
-				  }
-			  }
+
+				if(gettype($atts) == "array") {
+					foreach ($atts as $key => $value) {
+						// Consider any non-recognized shortcode attribute key as an override to widget options
+						if(!in_array($key, array_keys($defaults_array))) {
+							$options_final[$key] = $value;
+						}
+					}
+				}
 			  $options = json_encode($options_final);
 			  $widget_script = str_replace($submatch_value, $options, $widget_script);
 		  }
