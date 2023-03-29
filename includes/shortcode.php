@@ -48,30 +48,55 @@ function supersaas_button_hook($atts)
   if ($display_choice === 'popup_btn') {
 	  $out = '';
 	  // Pattern that represents a sequence that specifies both account and schedule to display
-	  preg_match_all("/(?<=\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
-	  // Match and update schedule
-    foreach ($id_matches as &$match_value) {
-      foreach ($match_value as &$submatch_value) {
-        list($id, $name) = explode(':', $submatch_value);
-        if ($name !== $account) {
-          if (!empty($after)) {
-            $widget_script = str_replace($submatch_value, $after, $widget_script);
-            $widget_script = str_replace($id, $after, $widget_script);
-          }
-          if (!empty($schedule)) {
-            $widget_script = str_replace($submatch_value, $schedule, $widget_script);
-            $widget_script = str_replace($id, $schedule, $widget_script);
-          }
-          if(empty($schedule) && empty($after) && !empty($default_schedule)) {
-            $widget_script = str_replace($submatch_value, $default_schedule, $widget_script);
-            $widget_script = str_replace($id, $default_schedule, $widget_script);
-          }
-        } else {
-          $widget_script = str_replace($submatch_value, $name, $widget_script);
-        }
-      }
-    }
-		// Match and override options
+
+//	  $patterns = array();
+//	  $patterns[0] = '/(?<=SuperSaaS\(\")[0-9]+:\w+(?=\")/i'; // for account id:name (first arg)
+//		$patterns[1] = '/(?<=,\")[0-9]+:\w+(?=\")/i'; // for schedule id:name (second arg)
+//	  $patterns[2] = '/SuperSaaS\([\s\S]*\Knull/i'; // for null (as SuperSaaS arg)
+//
+//	  $replacements = array();
+//	  $replacements[2] = 'bear';
+//	  $replacements[1] = $after;
+//	  $replacements[0] = 'slow';
+
+		// Determine a name to inject
+	  $final_schedule_name = '';
+	  if (!empty($after)) {
+		  $final_schedule_name = $after;
+	  }
+	  if (!empty($schedule)) {
+		  $final_schedule_name = $schedule;
+	  }
+	  if(empty($schedule) && empty($after) && !empty($default_schedule)) {
+		  $final_schedule_name = $default_schedule;
+	  }
+
+		if(!empty($final_schedule_name)) {
+			// Match and replace {account_id:account_name} with {account_name} to trigger behaviour where
+			//  schedule name can be passed without id
+			preg_match_all("/(?<=SuperSaaS\(\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
+			foreach ($id_matches as &$match_value) {
+				foreach ($match_value as &$submatch_value) {
+					list($account_id, $name) = explode(':', $submatch_value);
+					$widget_script = str_replace($submatch_value, $name, $widget_script);
+				}
+			}
+
+			// Match and update schedule (unless null is provided)
+			preg_match_all("/(?<=,\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
+			foreach ($id_matches as &$match_value) {
+				foreach ($match_value as &$submatch_value) {
+					list($schedule_id, $name) = explode(':', $submatch_value);
+					$widget_script = str_replace($submatch_value, $final_schedule_name, $widget_script);
+					$widget_script = str_replace($schedule_id, $final_schedule_name, $widget_script);
+				}
+			}
+
+			// Match and update schedule if null is provided
+			$widget_script = preg_replace("/SuperSaaS\([\s\S]*\Knull/i", "\"$final_schedule_name\"", $widget_script);
+		}
+
+		// Match and override widget options
 	  preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
 	  foreach ($widget_options_matches as &$match_value) {
 		  foreach ($match_value as &$submatch_value) {
