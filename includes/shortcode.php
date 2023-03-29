@@ -16,14 +16,12 @@ function supersaas_button_hook($atts)
 {
   global $current_user;
   wp_get_current_user();
-//  if (!$current_user->ID) {
-//    return '';
-//  }
 
   extract(shortcode_atts(
     array(
       'label' => get_option('ss_button_label', ''),
       'image' => get_option('ss_button_image', ''),
+	    'options' => '',
       'after' => '',
       'schedule' => '',
     ), $atts, 'supersaas'
@@ -34,22 +32,25 @@ function supersaas_button_hook($atts)
   $display_choice = get_option('ss_display_choice');
   $widget_script = get_option('ss_widget_script');
   $default_schedule = get_option('ss_schedule');
-
-  $pattern = "/(?<=\")[0-9]+:\w+(?=\")/i";
-  preg_match_all($pattern, $widget_script, $matches);
+  $autologin_enabled = get_option('ss_autologin_enabled');
+  // Sanitize options provided via shortcode
+  $options = str_replace('\'', '"', $options);
+  // Pattern that represents a sequence that specifies both account and schedule to display
 
   if ($display_choice === 'popup_btn') {
-    foreach ($matches as &$match_value) {
+	  $out = '';
+
+		// Match and update schedule
+	  preg_match_all("/(?<=\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
+    foreach ($id_matches as &$match_value) {
       foreach ($match_value as &$submatch_value) {
         list($id, $name) = explode(':', $submatch_value);
         if ($name !== $account) {
           if (!empty($after)) {
-            // $out .= '<p> ' . '$after: ' . $after . '</p>';
             $widget_script = str_replace($submatch_value, $after, $widget_script);
             $widget_script = str_replace($id, $after, $widget_script);
           }
           if (!empty($schedule)) {
-            // $out .= '<p> ' . '$schedule: ' . $schedule . '</p>';
             $widget_script = str_replace($submatch_value, $schedule, $widget_script);
             $widget_script = str_replace($id, $schedule, $widget_script);
           }
@@ -60,10 +61,32 @@ function supersaas_button_hook($atts)
         } else {
           $widget_script = str_replace($submatch_value, $name, $widget_script);
         }
-        // $out .= 'extracted id: ' . $id . ' extracted name: ' . $name;
       }
     }
-    $out = $widget_script;
+		// Match and override options
+	  preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
+	  foreach ($widget_options_matches as &$match_value) {
+		  foreach ($match_value as &$submatch_value) {
+			  if (!empty($options)) {
+				  $widget_script = str_replace($submatch_value, $options, $widget_script);
+			  }
+		  }
+	  }
+		// If autologin option enabled and current WP user is logged in:
+    if($autologin_enabled && $current_user->ID) {
+	    // Populate required variables before initializing widget
+      $user_login = $current_user->user_login;
+
+      $out .= '<script type="text/javascript">';
+      $out .= ' var supersaas_api_user_id = "' . $current_user->ID . 'fk";';
+      $out .= ' var supersaas_api_user = {name: "' .
+        htmlspecialchars($user_login) . '", full_name: "' .
+        htmlspecialchars($current_user->user_firstname . ' ' . $current_user->user_lastname) . '", email: "' .
+        htmlspecialchars($current_user->user_email) . '"} ;';
+      $out .= ' var supersaas_api_checksum = "' . md5("$account$api_key$user_login") . '";';
+      $out .= '</script>';
+    }
+    $out .= $widget_script;
   }
 
   if (empty($after) && empty($schedule)) {
@@ -87,7 +110,7 @@ function supersaas_button_hook($atts)
       $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://';
 
       if (!$domain) {
-        $api_domain = 'https://' . __('www.supersaas.com', 'supersaas');
+        $api_domain = "http://localhost:3000";
       } elseif (filter_var($domain, FILTER_VALIDATE_URL)) {
         $api_domain = rtrim($domain, '/');
       } else {
@@ -95,8 +118,9 @@ function supersaas_button_hook($atts)
       }
       $api_endpoint = $api_domain . '/api/users';
 
-      if ($current_user->ID) {
-        // WP user is logged in
+	    // If autologin option enabled and current WP user is logged in:
+      if ($current_user->ID && $autologin_enabled) {
+	      //  Generate a hidden form with user data
         $account = str_replace(' ', '_', $account);
         $out = '<form method="post" action=' . $api_endpoint . '>';
         $out .= '<input type="hidden" name="account" value="' . $account . '"/>';
@@ -118,8 +142,13 @@ function supersaas_button_hook($atts)
         $out .= "for (i = 0; i < reservedWords.length; i++) {if (reservedWords[i] === '{$user_login}') {return confirm('";
         $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
       } else {
-        // WP user is NOT logged in
-        $out = '<a href="' . $api_domain . '/schedule/' . $account . '/' . $after . '">' . '<button>' . htmlspecialchars($label) . '</button>' . '</a>';
+        // Show a schedule button as simple link
+	      $href = "$api_domain/schedule/$account/$after";
+	      if ($image) {
+		      $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
+	      } else {
+		      $out = '<a href="' . $href . '"><button>' . htmlspecialchars($label) . '</button></a>';
+	      }
       }
     } else {
       $out = __('(Setup incomplete)', 'supersaas');
