@@ -110,7 +110,7 @@ function supersaas_button_hook($atts)
       $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://';
 
       if (!$domain) {
-        $api_domain = "http://localhost:3000";
+        $api_domain = 'https://' . __('www.supersaas.com', 'supersaas');
       } elseif (filter_var($domain, FILTER_VALIDATE_URL)) {
         $api_domain = rtrim($domain, '/');
       } else {
