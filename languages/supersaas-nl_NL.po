@@ -1,21 +1,21 @@
 # SUPERSAAS WORDPRESS PLUGIN I18N
-# Copyright (C) 2010
+# Copyright (C) SuperSaaS
 # This file is distributed under the same license as the SuperSaaS package.
 
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: http://www.supersaas.nl/info/contact\n"
+"Report-Msgid-Bugs-To: https://www.supersaas.nl/info/contact\n"
 "POT-Creation-Date: 2010-05-29 21:43+0200\n"
-"PO-Revision-Date:  2010-05-29 21:43+0200\n"
+"PO-Revision-Date:  2023-03-30 21:43+0200\n"
 "Last-Translator: SuperSaaS <supersaas@supersaas.nl>\n"
 "Language-Team: SuperSaaS <supersaas@supersaas.nl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "Deze module toont een knop waarmee gebruikers automatisch met hun WordPress gebruikersnaam worden ingelogd op een SuperSaaS agenda. Aan de SuperSaaS kant wordt automatisch een gebruikersnaam aangemaakt met de meegstuurde informatie, en een bestaande gebruikersnaam wordt zonodig aangepast. Werkt met zowel de betaalde als de gratis versie van SuperSaaS."
+msgid "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Deze module toont een SuperSaaS reserveringssysteem in een venster of via een “Reserveer nu” knop. Optioneel kunnen gebruikers automatisch worden ingelogd met hun WordPress gebruikersnaam, waarbij aan de SuperSaaS kant automatisch een gebruikersnaam wordt aangemaakt met de informatie uit Wordpress. Werkt met zowel de betaalde als de gratis versie van SuperSaaS."
 
 msgid "Book Now!"
 msgstr "Reserveer nu"
@@ -24,7 +24,7 @@ msgid "www.supersaas.com"
 msgstr "www.supersaas.nl"
 
 msgid "(Setup incomplete)"
-msgstr "(Instellingen incompleet)"
+msgstr "(Instellingen onvolledig)"
 
 msgid "SuperSaaS Settings"
 msgstr "SuperSaaS instellingen"
@@ -32,26 +32,26 @@ msgstr "SuperSaaS instellingen"
 msgid "SuperSaaS account name"
 msgstr "SuperSaaS accountnaam"
 
-msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
-msgstr "De gebruikersnaam van uw SuperSaaS account. Als u geen gebruikersnaam heeft moet u deze eerst aanmaken op supersaas.nl"
+msgid "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
+msgstr "De gebruikersnaam van uw SuperSaaS account (niet uw emailadres). Als u geen gebruikersnaam heeft moet u deze eerst aanmaken op supersaas.nl"
 
 msgid "SuperSaaS API Key"
 msgstr "SuperSaaS API key"
 
 msgid "The API key for your SuperSaaS account."
-msgstr "De API sleutel van de pagina Toegangsbeheer in het SuperSaaS account"
+msgstr "De API sleutel uit uw SuperSaaS account"
 
 msgid "Schedule name"
 msgstr "Agendanaam"
 
-msgid "The name of the schedule or URL to redirect to after login."
-msgstr "Naam van de agenda of een URL waar na het inloggen heen wordt gesprongen"
+msgid "The name of the schedule."
+msgstr "Naam van de agenda"
 
 msgid "Button Label"
 msgstr "Opschrift knop"
 
-msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
-msgstr "De tekst die op de knop wordt weergegeven, bijvoorbeeld 'Reserveer nu!'"
+msgid "The text to be displayed on the button, for example ‘Create Appointment’."
+msgstr "De tekst die op de knop wordt weergegeven, bijvoorbeeld ‘Reserveer nu!’"
 
 msgid "Button Image"
 msgstr "Plaatje van knop"
@@ -60,73 +60,73 @@ msgid "optional"
 msgstr "optioneel"
 
 msgid "Location of an image file to use as the button. Can be left blank."
-msgstr "Locatie waar een plaatje te vinden is dat als knop wordt getoond"
+msgstr "Locatie waar een plaatje te vinden is dat als knop wordt getoond."
 
 msgid "Custom domain name"
 msgstr "Eigen domeinnaam"
 
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
-msgstr "Als u een eigen domeinnaam naar SuperSaaS laat wijzen voer die dan hier in"
+msgstr "Als u een eigen domeinnaam naar SuperSaaS laat wijzen voer die dan hier in."
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
 msgstr "Uw gebruikersnaam is een door SuperSaaS gereserveerd woord. Mogelijk kunt u niet inloggen. Wilt u doorgaan?"
 
 msgid "How would you like to show your SuperSaaS schedule?"
-msgstr "~How would you like to show your SuperSaaS schedule?~"
+msgstr "How wilt u dat uw SuperSaaS agenda getoond wordt?"
 
 msgid "SuperSaaS schedule display"
-msgstr "~SuperSaaS schedule display~"
+msgstr "SuperSaaS agenda weergave"
 
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
-msgstr "~Show a button that forwards the user to my SuperSaaS calendar~"
+msgstr "Toon een knop die de gebruiker doorstuurt naar mijn SuperSaaS agenda"
 
-msgid "Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site"
-msgstr "~Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site~"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgstr "Toon een de agenda via een venster of als knop geïntegreerd in mijn Wordpress site"
 
 msgid "If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name"
 msgstr "~If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name~"
 
 msgid "Automatically logging in the user requires your"
-msgstr "~Automatically logging in the user requires your~"
+msgstr 'Om de gebruiker automatisch te kunnen inloggen is uw <a href="https://www.supersaas.nl/accounts/edit#api_key">API sleutel</a> nodig'
 
 msgid "API key"
-msgstr "~API key~"
+msgstr "API sleutel"
 
-msgid "Paste your widget script generated on"
-msgstr "~Paste your widget script generated on~"
+msgid 'Paste the JavaScript <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget">widget code</a> generated on the SuperSaaS site.'
+msgstr 'Plak hier de JavaScript <a href="https://www.supersaas.nl/info/doc/integreren/via_widget">widget code</a> van de SuperSaaS site.'
 
 msgid "this page"
 msgstr "~this page~"
 
-msgid "Paste the script here"
-msgstr "~Paste the script here~"
+msgid "Paste the JavaScript code here"
+msgstr "Plak hier de JavaScript code"
 
 msgid "The default name of the schedule."
-msgstr "~The default name of the schedule.~"
+msgstr "De naam van de agenda."
 
 msgid "Leave blank for"
-msgstr "~Leave blank for~"
+msgstr "Blanco laten voor"
 
-msgid "default behaviour"
-msgstr "~default behaviour~"
+msgid "default calendar"
+msgstr "standaard agenda"
 
 msgid "(can be overwritten in shortcode)"
-msgstr "~(can be overwritten in shortcode)~"
+msgstr "(kan overschreven worden via de shortcode)"
 
 msgid "Button Settings"
-msgstr "~Button Settings~"
+msgstr "Instellingen voor de knop"
 
-msgid "Error occured while parsing options. Did you provide options json properly?"
-msgstr "~Error occured while parsing options. Did you provide options json properly?~"
+msgid "Error occured while parsing options. Did you provide options JSON properly?"
+msgstr "Er is een fout opgetreden. Klopt de JSON wel?"
 
 msgid "Account name can't be blank"
-msgstr "~Account name can't be blank~"
+msgstr "De accountnaam moet ingevuld worden"
 
 msgid "API key can't be blank"
-msgstr "~API key can't be blank~"
+msgstr "API sleutel moet ingevuld zijn"
 
-msgid "Widget script is invalid. Are you sure that you've pasted script generated on"
-msgstr "~Widget script is invalid. Are you sure that you've pasted script generated on~"
+msgid 'Widget script is invalid. Are you sure that you’ve pasted script generated <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget">here</a>?'
+msgstr 'Widget script klopt niet. Weet u zeker dat u het script <a href="https://www.supersaas.nl/info/doc/integreren/via_widget">hier</a> heeft gekopiëerd?'
 
 msgid "Link is invalid"
-msgstr "~Link is invalid~"
+msgstr "Link klopt niet"
