@@ -125,3 +125,10 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 
 = 2.0.8 =
 * Tested latest WordPress version 6.1
+
+= 2.1 =
+* Select between displaying a button and a highly customizable widget
+* Choose whether to automatically login WordPress users to SuperSaaS
+* Customize widget through shortcode
+* Receive helpful guidance with thorough validations on plugin settings screen
+
