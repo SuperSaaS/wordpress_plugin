@@ -50,8 +50,8 @@ msgstr "Naam van de agenda"
 msgid "Button Label"
 msgstr "Opschrift knop"
 
-msgid "The text to be displayed on the button, for example ‘Create Appointment’."
-msgstr "De tekst die op de knop wordt weergegeven, bijvoorbeeld ‘Reserveer nu!’"
+msgid "The text to be displayed on the button, for example 'Create Appointment'."
+msgstr "De tekst die op de knop wordt weergegeven, bijvoorbeeld 'Reserveer nu!'"
 
 msgid "Button Image"
 msgstr "Plaatje van knop"
@@ -86,17 +86,11 @@ msgstr "Toon een de agenda via een venster of als knop geïntegreerd in mijn Wor
 msgid "If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name"
 msgstr "~If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name~"
 
-msgid "Automatically logging in the user requires your"
-msgstr 'Om de gebruiker automatisch te kunnen inloggen is uw <a href="https://www.supersaas.nl/accounts/edit#api_key">API sleutel</a> nodig'
+msgid "Automatically logging in the user requires your <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API key</a>"
+msgstr "Om de gebruiker automatisch te kunnen inloggen is uw <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API sleutel</a> nodig"
 
-msgid "API key"
-msgstr "API sleutel"
-
-msgid 'Paste the JavaScript <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget">widget code</a> generated on the SuperSaaS site.'
-msgstr 'Plak hier de JavaScript <a href="https://www.supersaas.nl/info/doc/integreren/via_widget">widget code</a> van de SuperSaaS site.'
-
-msgid "this page"
-msgstr "~this page~"
+msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
+msgstr "Plak hier de JavaScript <a href='https://www.supersaas.nl/info/doc/integreren/via_widget' target='_blank'>widget code</a> van de SuperSaaS site."
 
 msgid "Paste the JavaScript code here"
 msgstr "Plak hier de JavaScript code"
@@ -104,14 +98,8 @@ msgstr "Plak hier de JavaScript code"
 msgid "The default name of the schedule."
 msgstr "De naam van de agenda."
 
-msgid "Leave blank for"
-msgstr "Blanco laten voor"
-
-msgid "default calendar"
-msgstr "standaard agenda"
-
-msgid "(can be overwritten in shortcode)"
-msgstr "(kan overschreven worden via de shortcode)"
+msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
+msgstr "Blanco laten voor <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>standaard agenda</a> (kan overschreven worden via de shortcode)"
 
 msgid "Button Settings"
 msgstr "Instellingen voor de knop"
@@ -125,8 +113,8 @@ msgstr "De accountnaam moet ingevuld worden"
 msgid "API key can't be blank"
 msgstr "API sleutel moet ingevuld zijn"
 
-msgid 'Widget script is invalid. Are you sure that you’ve pasted script generated <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget">here</a>?'
-msgstr 'Widget script klopt niet. Weet u zeker dat u het script <a href="https://www.supersaas.nl/info/doc/integreren/via_widget">hier</a> heeft gekopiëerd?'
+msgid "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
+msgstr "Widget script klopt niet. Weet u zeker dat u het script <a href='https://www.supersaas.nl/info/doc/integreren/via_widget' target='_blank'>hier</a> heeft gekopiëerd?"
 
 msgid "Link is invalid"
 msgstr "Link klopt niet"

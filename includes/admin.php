@@ -113,7 +113,7 @@ function supersaas_options()
             <input name="ss_display_choice" type="radio" value="popup_btn"
                    class="tog" <?php echo get_option('ss_display_choice') === 'popup_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
             />
-	          <?php _e('Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+	          <?php _e('Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
           </label>
         </div>
       </fieldset>
@@ -129,24 +129,21 @@ function supersaas_options()
 
         <br/>
         <span id="ss_password" class="<?php echo get_option('ss_autologin_enabled') === '1' ? '' : 'hidden' ?>">
-          <?php _e('Automatically logging in the user requires your', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
-          <a href="http://www.supersaas.com/accounts/edit" target="_blank"><?php _e('API key', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a>:
+          <?php _e("Automatically logging in the user requires your <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API key</a>", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
           <input type="text" name="ss_password" value="<?php echo get_option('ss_password'); // WPCS: XSS.EscapeOutput OK.?>"/>
           <span class="error-msg hidden" style="color: red"> <?php _e("API key can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         </span>
       </p>
 
       <p id="ss_widget_script" class="<?php echo get_option('ss_display_choice') === 'regular_btn' ? 'hidden' : '' ?>">
-	      <?php _e('Paste your widget script generated on', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
-         <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget" target="_blank"><?php _e('this page', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a>
+	      <?php _e("Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site.", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
         <br/>
         <textarea name="ss_widget_script" rows="9" cols="80" placeholder="<?php _e('Paste the script here', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>">
           <?php echo get_option('ss_widget_script'); // WPCS: XSS.EscapeOutput OK.?>
         </textarea>
         <br/>
         <span class="error-msg hidden" style="color: red">
-          <?php _e("Widget script is invalid. Are you sure that you've pasted script generated on", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
-          <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget" target="_blank"><?php _e('this page', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a> ?
+          <?php _e("Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
         </span>
       </p>
 
@@ -162,11 +159,7 @@ function supersaas_options()
             <br/>
             <span class='description'>
               <?php _e('The default name of the schedule.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> <br/>
-              <?php _e('Leave blank for', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
-              <a href="https://www.supersaas.com/accounts/access#account_list_schedules_1" target="_blank">
-                <?php _e('default behaviour', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
-              </a>
-              <?php _e('(can be overwritten in shortcode)', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+              <?php _e("Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
             </span>
           </td>
         </tr>
@@ -181,7 +174,7 @@ function supersaas_options()
             />
             <br/>
             <span class='description'>
-              <?php _e("The text to be put on the button that is displayed, for example 'Create Appointment'.", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+              <?php _e("The text to be displayed on the button, for example 'Create Appointment'.", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
             </span>
             <br/>
             <input type="text" name="ss_button_image"
