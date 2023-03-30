@@ -90,7 +90,8 @@ function supersaas_options()
                value="<?php echo get_option('ss_account_name'); // WPCS: XSS.EscapeOutput OK.?>"
                required
         />
-        <span class="error-msg hidden" style="color: red"> <?php _e("Account name can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
+        <span class="error-msg error-msg-1 hidden" style="color: red"> <?php _e("Account name can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
+        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please, provide and account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         <br/>
       </p>
 

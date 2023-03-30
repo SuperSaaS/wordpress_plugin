@@ -47,7 +47,13 @@ jQuery(function ($) {
     var accountName = $("input[name=ss_account_name]")
     if(accountName[0].value.trim().length === 0) {
       accountName.css( "border-color", "red" );
-      accountName.nextAll(".error-msg.hidden").removeClass("hidden");
+      accountName.nextAll(".error-msg-1.hidden").removeClass("hidden");
+      errors++;
+    }
+
+    if(accountName[0].value.includes("@")) {
+      accountName.css( "border-color", "red" );
+      accountName.nextAll(".error-msg-2.hidden").removeClass("hidden");
       errors++;
     }
 
