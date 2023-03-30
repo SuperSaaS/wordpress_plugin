@@ -71,3 +71,50 @@ msgstr "Als u een eigen domeinnaam naar SuperSaaS laat wijzen voer die dan hier 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
 msgstr "Uw gebruikersnaam is een door SuperSaaS gereserveerd woord. Mogelijk kunt u niet inloggen. Wilt u doorgaan?"
 
+msgid "How would you like to show your SuperSaaS schedule?"
+msgstr "~How would you like to show your SuperSaaS schedule?~"
+
+msgid "SuperSaaS schedule display"
+msgstr "~SuperSaaS schedule display~"
+
+msgid "Show a button that forwards the user to my SuperSaaS calendar"
+msgstr "~Show a button that forwards the user to my SuperSaaS calendar~"
+
+msgid "Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site"
+msgstr "~Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site~"
+
+msgid "If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name"
+msgstr "~If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name~"
+
+msgid "Automatically logging in the user requires your"
+msgstr "~Automatically logging in the user requires your~"
+
+msgid "API key"
+msgstr "~API key~"
+
+msgid "Paste your widget script generated on"
+msgstr "~Paste your widget script generated on~"
+
+msgid "this page"
+msgstr "~this page~"
+
+msgid "Paste the script here"
+msgstr "~Paste the script here~"
+
+msgid "The default name of the schedule."
+msgstr "~The default name of the schedule.~"
+
+msgid "Leave blank for"
+msgstr "~Leave blank for~"
+
+msgid "default behaviour"
+msgstr "~default behaviour~"
+
+msgid "(can be overwritten in shortcode)"
+msgstr "~(can be overwritten in shortcode)~"
+
+msgid "Button Settings"
+msgstr "~Button Settings~"
+
+msgid "Error occured while parsing options. Did you provide options json properly?"
+msgstr "~Error occured while parsing options. Did you provide options json properly?~"

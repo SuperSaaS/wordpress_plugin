@@ -95,17 +95,17 @@ function supersaas_options()
       </p>
 
       <div style="font-weight: 600; font-size: 14px;">
-        How would you like to show your SuperSaaS schedule?
+	      <?php _e('How would you like to show your SuperSaaS schedule?', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
       </div>
 
       <fieldset>
-        <legend class="screen-reader-text"><span>SuperSaaS schedule displays</span></legend>
+        <legend class="screen-reader-text"><span> <?php _e('SuperSaaS schedule display', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></span></legend>
         <div>
           <label>
             <input name="ss_display_choice" type="radio" value="regular_btn"
                    class="tog" <?php echo get_option('ss_display_choice') === 'regular_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
             />
-            Show a button that forwards the user to my SuperSaaS calendar
+	          <?php _e('Show a button that forwards the user to my SuperSaaS calendar', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
           </label>
         </div>
         <div>
@@ -113,7 +113,7 @@ function supersaas_options()
             <input name="ss_display_choice" type="radio" value="popup_btn"
                    class="tog" <?php echo get_option('ss_display_choice') === 'popup_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
             />
-            Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site
+	          <?php _e('Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
           </label>
         </div>
       </fieldset>
@@ -124,20 +124,22 @@ function supersaas_options()
                  value="1"
                  <?php echo get_option('ss_autologin_enabled') === '1' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
           />
-          If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name
+	        <?php _e('If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
         </label>
 
         <br/>
         <span id="ss_password" class="<?php echo get_option('ss_autologin_enabled') === '1' ? '' : 'hidden' ?>">
-          Automatically logging in the user requires your <a href="http://www.supersaas.com/accounts/edit" target="_blank">API key</a>:
+          <?php _e('Automatically logging in the user requires your', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
+          <a href="http://www.supersaas.com/accounts/edit" target="_blank"><?php _e('API key', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a>:
           <input type="text" name="ss_password" value="<?php echo get_option('ss_password'); // WPCS: XSS.EscapeOutput OK.?>"/>
         </span>
       </p>
 
       <p id="ss_widget_script" class="<?php echo get_option('ss_display_choice') === 'regular_btn' ? 'hidden' : '' ?>">
-        Paste your <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget" target="_blank">widget script</a> here:
+	      <?php _e('Paste your widget script generated on', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
+         <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget" target="_blank"><?php _e('this page', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a>
         <br/>
-        <textarea name="ss_widget_script" rows="9" cols="80" placeholder="Paste the script here">
+        <textarea name="ss_widget_script" rows="9" cols="80" placeholder="<?php _e('Paste the script here', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>">
           <?php echo get_option('ss_widget_script'); // WPCS: XSS.EscapeOutput OK.?>
         </textarea>
       </p>
@@ -153,14 +155,18 @@ function supersaas_options()
             />
             <br/>
             <span class='description'>
-              The default name of the schedule. <br/>
-              Leave blank for <a href="https://www.supersaas.com/accounts/access#account_list_schedules_1" target="_blank">default behaviour</a> (can be overwritten in shortcode)
+              <?php _e('The default name of the schedule.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> <br/>
+              <?php _e('Leave blank for', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
+              <a href="https://www.supersaas.com/accounts/access#account_list_schedules_1" target="_blank">
+                <?php _e('default behaviour', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+              </a>
+              <?php _e('(can be overwritten in shortcode)', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
             </span>
           </td>
         </tr>
         <tr id="ss_button_settings" class="<?php echo get_option('ss_display_choice') === 'popup_btn' ? 'hidden' : '' ?>">
           <th scope="row">
-            Button Settings
+	          <?php _e('Button Settings', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
             <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>)</em>
           </th>
           <td>

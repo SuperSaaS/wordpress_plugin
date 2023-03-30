@@ -39,8 +39,8 @@ function supersaas_button_hook($atts)
 	$options_obj = json_decode($options);
 	if($options && !$options_obj) {
 		// Validate options provided via shortcode
-		$out .= "<p> Error occured while parsing options. Did you provide options json properly? <br/> ";
-		$out .= "Example: <code> [supersaas options=\"{'menu':'show','view':'card'}\"] </code> </p>";
+		$out .= "<p>" . __('Error occured while parsing options. Did you provide options json properly?', 'supersaas') . "<br/> ";
+		$out .= __('Example', 'supersaas') . ": <code> [supersaas options=\"{'menu':'show','view':'card'}\"] </code> </p>";
 		return $out;
 	}
 
