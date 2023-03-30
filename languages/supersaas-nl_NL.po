@@ -118,3 +118,15 @@ msgstr "~Button Settings~"
 
 msgid "Error occured while parsing options. Did you provide options json properly?"
 msgstr "~Error occured while parsing options. Did you provide options json properly?~"
+
+msgid "Account name can't be blank"
+msgstr "~Account name can't be blank~"
+
+msgid "API key can't be blank"
+msgstr "~API key can't be blank~"
+
+msgid "Widget script is invalid. Are you sure that you've pasted script generated on"
+msgstr "~Widget script is invalid. Are you sure that you've pasted script generated on~"
+
+msgid "Link is invalid"
+msgstr "~Link is invalid~"

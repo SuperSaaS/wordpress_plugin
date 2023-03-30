@@ -21,10 +21,10 @@ function supersaas_add_admin_menu()
 function supersaas_register_settings()
 {
   register_setting('supersaas-settings', 'ss_account_name');
-  register_setting('supersaas-settings', 'ss_display_choice'); // new
-  register_setting('supersaas-settings', 'ss_autologin_enabled'); // new
+  register_setting('supersaas-settings', 'ss_display_choice');
+  register_setting('supersaas-settings', 'ss_autologin_enabled');
   register_setting('supersaas-settings', 'ss_password'); // NOTE: this is an API KEY, not a user password; the "ss_password" key is used for backwards compatibility
-  register_setting('supersaas-settings', 'ss_widget_script'); // new
+  register_setting('supersaas-settings', 'ss_widget_script');
 
   register_setting('supersaas-settings', 'ss_schedule');
   register_setting('supersaas-settings', 'ss_button_label');
@@ -42,7 +42,6 @@ function supersaas_register_assets()
   wp_register_script("supersaas_custom_js_script", plugin_dir_url(__FILE__) . 'js/admin.js', array('jquery'), null);
   wp_enqueue_script('supersaas_custom_js_script');
 }
-
 
 /**
  * Sanitizes the custom domain settings field.
@@ -80,7 +79,7 @@ function supersaas_options()
   <div class="wrap">
     <h2><?php _e('SuperSaaS Settings', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></h2>
 
-    <form method="post" action="options.php">
+    <form method="post" action="options.php" id="supersaas-options-form">
       <?php settings_fields('supersaas-settings'); ?>
       <p>
         <span style="font-weight: 600; font-size: 14px;">
@@ -91,6 +90,7 @@ function supersaas_options()
                value="<?php echo get_option('ss_account_name'); // WPCS: XSS.EscapeOutput OK.?>"
                required
         />
+        <span class="error-msg hidden" style="color: red"> <?php _e("Account name can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         <br/>
       </p>
 
@@ -132,6 +132,7 @@ function supersaas_options()
           <?php _e('Automatically logging in the user requires your', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
           <a href="http://www.supersaas.com/accounts/edit" target="_blank"><?php _e('API key', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a>:
           <input type="text" name="ss_password" value="<?php echo get_option('ss_password'); // WPCS: XSS.EscapeOutput OK.?>"/>
+          <span class="error-msg hidden" style="color: red"> <?php _e("API key can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         </span>
       </p>
 
@@ -142,6 +143,11 @@ function supersaas_options()
         <textarea name="ss_widget_script" rows="9" cols="80" placeholder="<?php _e('Paste the script here', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>">
           <?php echo get_option('ss_widget_script'); // WPCS: XSS.EscapeOutput OK.?>
         </textarea>
+        <br/>
+        <span class="error-msg hidden" style="color: red">
+          <?php _e("Widget script is invalid. Are you sure that you've pasted script generated on", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
+          <a href="https://www.supersaas.com/info/doc/integration/integration_with_widget" target="_blank"><?php _e('this page', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?></a> ?
+        </span>
       </p>
 
       <table class="form-table">
@@ -181,6 +187,7 @@ function supersaas_options()
             <input type="text" name="ss_button_image"
                    value="<?php echo get_option('ss_button_image'); // WPCS: XSS.EscapeOutput OK.?>"
             />
+            <span class="error-msg hidden" style="color: red"> <?php _e("Link is invalid", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
             <br/>
             <span class='description'>
               <?php _e('Location of an image file to use as the button. Can be left blank.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
