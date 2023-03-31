@@ -29,7 +29,8 @@ function supersaas_button_hook($atts)
 
   $account = get_option('ss_account_name');
   $api_key = get_option('ss_password');
-  $display_choice = get_option('ss_display_choice');
+	// Backward compatibility for users who will update the plugin without updating settings
+  $display_choice = get_option('ss_display_choice', 'regular_btn');
   $widget_script = get_option('ss_widget_script');
   $default_schedule = get_option('ss_schedule');
   $autologin_enabled = get_option('ss_autologin_enabled');
