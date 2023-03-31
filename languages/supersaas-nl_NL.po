@@ -83,8 +83,8 @@ msgstr "Toon een knop die de gebruiker doorstuurt naar mijn SuperSaaS agenda"
 msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
 msgstr "Toon een de agenda via een venster of als knop geïntegreerd in mijn Wordpress site"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name"
-msgstr "~If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name~"
+msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgstr "Als de gebruiker is ingelogd in WordPress, dan wordt hij ingelogd in uw SuperSaaS account met zijn WordPress gebruikersnaam"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API key</a>"
 msgstr "Om de gebruiker automatisch te kunnen inloggen is uw <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API sleutel</a> nodig"
@@ -110,8 +110,8 @@ msgstr "Er is een fout opgetreden. Klopt de JSON wel?"
 msgid "Account name can't be blank"
 msgstr "De accountnaam moet ingevuld worden"
 
-msgid "Please, provide and account name (not an email)"
-msgstr "~Please, provide and account name (not an email)~"
+msgid "Please provide and account name (not an email)"
+msgstr "Vul alstublieft een accounnaam in (geen emailadres)"
 
 msgid "API key can't be blank"
 msgstr "API sleutel moet ingevuld zijn"
