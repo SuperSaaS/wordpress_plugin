@@ -91,7 +91,7 @@ function supersaas_options()
                required
         />
         <span class="error-msg error-msg-1 hidden" style="color: red"> <?php _e("Account name can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
-        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please, provide and account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
+        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please provide and account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         <br/>
       </p>
 
@@ -125,12 +125,12 @@ function supersaas_options()
                  value="1"
                  <?php echo get_option('ss_autologin_enabled') === '1' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
           />
-	        <?php _e('If the user is logged into WordPress, log them into your SuperSaaS account with the WordPress user name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+	        <?php _e('If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
         </label>
 
         <br/>
         <span id="ss_password" class="<?php echo get_option('ss_autologin_enabled') === '1' ? '' : 'hidden' ?>">
-          <?php _e("Automatically logging in the user requires your <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API key</a>", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
+          <?php _e("Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
           <input type="text" name="ss_password" value="<?php echo get_option('ss_password'); // WPCS: XSS.EscapeOutput OK.?>"/>
           <span class="error-msg hidden" style="color: red"> <?php _e("API key can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         </span>
