@@ -86,7 +86,7 @@ msgstr "Toon een de agenda via een venster of als knop geïntegreerd in mijn Wor
 msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
 msgstr "Als de gebruiker is ingelogd in WordPress, dan wordt hij ingelogd in uw SuperSaaS account met zijn WordPress gebruikersnaam"
 
-msgid "Automatically logging in the user requires your <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API key</a>"
+msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
 msgstr "Om de gebruiker automatisch te kunnen inloggen is uw <a href='https://www.supersaas.nl/accounts/edit#api_key' target='_blank'>API sleutel</a> nodig"
 
 msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
