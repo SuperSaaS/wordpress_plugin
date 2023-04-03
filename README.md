@@ -30,7 +30,6 @@ The shortcode takes the following optional arguments.
 
 If you selected 'Show a SuperSaaS widget containing the calendar as a button or a frame directly on my site' in plugin settings you can provide additional attributes to shortcode:
 * `options` - The JSON encoded into a string that contains overrides to widget configuration. For example `options="{'view':'card','menu_pos':'top'}"`. More configuration options can be found on [widget builder page](https://www.supersaas.com/info/doc/integration/integration_with_widget).
-* `after` - Add alias for `schedule`.
 * _Any_ other arguments provided to shortcode will be treated as an override to widget options. For example `[supersaas view="card"]` will provide `"view":"card"` to widget configuration options. 
 
 For further details of the SuperSaaS WordPress plugin see also the **readme.txt** file.
