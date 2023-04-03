@@ -84,7 +84,6 @@ function supersaas_options()
       <p>
         <span style="font-weight: 600; font-size: 14px;">
           <?php _e('SuperSaaS account name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
-          <em>:</em>
         </span>
         <input type="text" name="ss_account_name"
                value="<?php echo get_option('ss_account_name'); // WPCS: XSS.EscapeOutput OK.?>"
