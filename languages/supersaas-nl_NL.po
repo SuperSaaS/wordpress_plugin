@@ -101,7 +101,7 @@ msgstr "De naam van de agenda."
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Blanco laten voor <a href='https://www.supersaas.nl/accounts/access#account_list_schedules_1' target='_blank'>standaard agenda</a> (kan overschreven worden via de shortcode)"
 
-msgid "Button Settings"
+msgid "Button settings"
 msgstr "Instellingen voor de knop"
 
 msgid "Error occured while parsing options. Did you provide options JSON properly?"

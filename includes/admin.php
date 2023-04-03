@@ -165,7 +165,7 @@ function supersaas_options()
         </tr>
         <tr id="ss_button_settings" class="<?php echo get_option('ss_display_choice') === 'popup_btn' ? 'hidden' : '' ?>">
           <th scope="row">
-	          <?php _e('Button Settings', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+	          <?php _e('Button settings', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
             <em>(<?php _e('optional', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>)</em>
           </th>
           <td>
