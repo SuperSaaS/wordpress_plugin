@@ -1,49 +1,48 @@
 === SuperSaaS - online appointment scheduling ===
 Contributors: supersaas
-Donate link: http://www.supersaas.com/
+Donate link: https://www.supersaas.com/
 Tags: appointments, schedule, scheduling, booking, calendar, agenda, reservation, book appointment, book meetings, appointment calendar, appointment scheduling, reservation, online scheduling, online schedule, online meetings, reservation system, booking system, scheduling system, scheduling software, appointment software
 Requires at least: 2.7
-Tested up to: 6.1
-Stable tag: 2.0.8
+Tested up to: 6.2
+Stable tag: 2.1
 License: GPLv2
 
 SuperSaaS is a flexible appointment scheduling system that works with many different businesses. The basic version is free.
 
 == Description ==
 
-SuperSaaS is a flexible online appointment scheduling system that works with many different businesses and is available in 28 languages. The basic version is free, a paid version is available for large users and commercial uses.
+SuperSaaS is a flexible online appointment scheduling system that works with many different businesses and is available in 28 languages. The basic version is free, a paid version is available for large users and commercial use.
 
-The supersaas plugin displays a "Book now" button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice.
+The plugin can automatically log a user into a SuperSaaS schedule using his WordPress username. It passes along the user's information, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice.
 
 = MORE INFORMATION =
-Visit the [supersaas.com](http://www.supersaas.com) website for an overview of all the SuperSaaS features.
-Read the [SuperSaaS WordPress Plugin tutorial page](http://www.supersaas.com/info/doc/integration/wordpress_integration) for information about how to install and setup the plugin in WordPress.
+Read the [SuperSaaS WordPress Plugin documentation page](https://www.supersaas.com/info/doc/integration/wordpress_integration) for information about how to install and setup the plugin in WordPress. Visit the [supersaas.com](https://www.supersaas.com) website for an overview of all features of the booking system.
 
 == Installation ==
 
 This section describes how to install the plugin and get it working.
 
-1. Download and unzip the plugin and upload it to the `/wp-content/plugins/` directory, or use the automatic plugin installer
+1. Search for SuperSaaS in the automatic plugin installer, or download and unzip the plugin and upload it to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place the short code [supersaas] on your pages everywhere you want the button to appear.
-1. Modify the SuperSaaS account to work with WordPress by following the [installation instructions](http://www.supersaas.com/info/doc/integration/wordpress_integration) on the SuperSaaS site.
+1. Place the short code [supersaas] on your pages where you want the button to appear.
+1. Modify the SuperSaaS account to work with WordPress by following the [installation instructions](https://www.supersaas.com/info/doc/integration/wordpress_integration) on the SuperSaaS site.
 
 == Frequently Asked Questions ==
 
 = I get an "Invalid e-mail" error when I try to click the button =
 
-Make sure you follow the [installation instructions](http://www.supersaas.com/info/doc/integration/wordpress_integration) for both the WordPress part *and the SuperSaaS* part.
+Make sure you follow the [installation instructions](https://www.supersaas.com/info/doc/integration/wordpress_integration) for both the WordPress part *and the SuperSaaS* part.
 
 == Screenshots ==
 
-1. **Class and Events Bookings** - Example of a SuperSaaS appointment schedule
-2. **One-on-One Appointments** - For example used by home rentals, therapists, coaches or driving lessons
-3. **SuperSaaS Dashboard** - Many configuration options available
-4. **Wordpress Plugin** - Configure the SuperSaaS Wordpress plugin, see also the tutorial section <a href="http://www.supersaas.com/info/doc/integration/wordpress_integration">tutorials</a>
+1. **Class and Events bookings** - Example of a SuperSaaS appointment schedule
+2. **One-on-One Appointments** - For example used by therapists, coaches and driving instructors
+3. **Multiple ways of integrating** - Integrated into a frame or as a button that opens the calendar
+4. **Wordpress Plugin settings** - Configure the SuperSaaS Wordpress plugin, also see the documentation section
 
 == Languages ==
 
-SuperSaaS is available in more than 28 languages. Check out the <a href="http://www.supersaas.com">SuperSaaS</a> website, for more information.
+SuperSaaS is available in over 28 languages. Check out the <a href="https://www.supersaas.com">SuperSaaS</a> website for more information.
 
 == Changelog ==
 
@@ -123,12 +122,10 @@ SuperSaaS is available in more than 28 languages. Check out the <a href="http://
 
 == Upgrade Notice ==
 
-= 2.0.8 =
-* Tested latest WordPress version 6.1
-
 = 2.1 =
 * Select between displaying a button and a highly customizable widget
-* Choose whether to automatically login WordPress users to SuperSaaS
-* Customize widget through shortcode
-* Receive helpful guidance with thorough validations on plugin settings screen
+* Choose whether to automatically log WordPress users into SuperSaaS
+* Customize the widget through the shortcode
+* Add helpful guidance with thorough validations on the plugin settings screen
+* Tested latest WordPress version 6.2
 
