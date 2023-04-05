@@ -72,7 +72,7 @@ msgid "Your username is a supersaas reserved word. You might not be able to logi
 msgstr "Uw gebruikersnaam is een door SuperSaaS gereserveerd woord. Mogelijk kunt u niet inloggen. Wilt u doorgaan?"
 
 msgid "How would you like to show your SuperSaaS schedule?"
-msgstr "How wilt u dat uw SuperSaaS agenda getoond wordt?"
+msgstr "Hoe wilt u dat uw SuperSaaS agenda getoond wordt?"
 
 msgid "SuperSaaS schedule display"
 msgstr "SuperSaaS agenda weergave"
