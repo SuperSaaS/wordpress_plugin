@@ -14,8 +14,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "Tento modul zobrazí tlačítko 'Rezervuj' které automaticky přihlásí uživatele do SuperSaaS rozvrhu s jeho uživatelským jménem z Wordpressu. Spolu s tím pošle nebo updatuje informace o uživateli v SuperSaaS podle potřeby. Odstraní se tak možnost dvojitého přihlašování. Funguje jak s verzí zdarma i s placenou verzí rezervačního systému SuperSaaS"
+msgid "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr ""
 
 msgid "Book Now!"
 msgstr "Rezervuj zde"
@@ -32,8 +32,8 @@ msgstr "SuperSaaS nastavení"
 msgid "SuperSaaS account name"
 msgstr "název účtu v SuperSaaS "
 
-msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
-msgstr "Název Vašeho účtu v SuperSaaS, pokud ještě účet v SuperSaaS nemáte vytvořte si jej na www.supersaas.cz"
+msgid "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
+msgstr ""
 
 msgid "SuperSaaS API Key"
 msgstr "SuperSaaS heslo"
@@ -44,14 +44,14 @@ msgstr "Heslo k Vašemu administrátorskému ůčtu v SuperSaaS"
 msgid "Schedule name"
 msgstr "Název rozvrhu"
 
-msgid "The name of the schedule or URL to redirect to after login."
-msgstr "Jméno Vašeho rozvrhu nebo jeho celé URL"
+msgid "The name of the schedule."
+msgstr ""
 
 msgid "Button Label"
 msgstr "Popis tlačítka"
 
-msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
-msgstr "Text který se zobrazí v tlačítku, např. 'Vytvořit schůzku'"
+msgid "The text to be displayed on the button, for example 'Create Appointment'."
+msgstr ""
 
 msgid "Button Image"
 msgstr "Obrázek tlačítka"
@@ -70,3 +70,54 @@ msgstr "Pokud jste si nastavili pro rezervační systém vaši vlastní doménu 
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
 msgstr "Použité uživatelské jméno je zabrané pro supersaas. Nebude možné se s ním přihlásit. Chcete pokračovat?"
+
+msgid "How would you like to show your SuperSaaS schedule?"
+msgstr ""
+
+msgid "SuperSaaS schedule display"
+msgstr ""
+
+msgid "Show a button that forwards the user to my SuperSaaS calendar"
+msgstr ""
+
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgstr ""
+
+msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgstr ""
+
+msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
+msgstr ""
+
+msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
+msgstr ""
+
+msgid "Paste the JavaScript code here"
+msgstr ""
+
+msgid "The default name of the schedule."
+msgstr ""
+
+msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
+msgstr ""
+
+msgid "Button settings"
+msgstr ""
+
+msgid "Error occured while parsing options. Did you provide options JSON properly?"
+msgstr ""
+
+msgid "Account name can't be blank"
+msgstr ""
+
+msgid "Please provide and account name (not an email)"
+msgstr ""
+
+msgid "API key can't be blank"
+msgstr ""
+
+msgid "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
+msgstr ""
+
+msgid "Link is invalid"
+msgstr ""

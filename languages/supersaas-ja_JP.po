@@ -14,8 +14,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "This module displays a 'Book now' button that automatically logs the user into a SuperSaaS schedule using his WordPress user name. It passes the user's information along, creating or updating the user's information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "このモジュールはWordpressのユーザー名でSuperSaaSに自動的にログイン出来る 今すぐ予約ボタンを表示出来ます。SuperSaaSで必要なユーザー情報や更新情報を送る事が可能です。2度のログインを不要にします。"
+msgid "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr ""
 
 msgid "Book Now!"
 msgstr "今すぐ予約"
@@ -32,8 +32,8 @@ msgstr "SuperSaaSセッティング"
 msgid "SuperSaaS account name"
 msgstr "SuperSaaSアカウント名"
 
-msgid "The account name of your SuperSaaS account. If you don't have an account name yet then please create one at supersaas.com."
-msgstr "SuperSaaSアカウント名。もしアカウント名をまだ作成していない場合はsupersaas.jpで作成して下さい。"
+msgid "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
+msgstr ""
 
 msgid "SuperSaaS API Key"
 msgstr "SuperSaaSパスワード"
@@ -44,14 +44,14 @@ msgstr "SuperSaaS管理者用アカウント"
 msgid "Schedule name"
 msgstr "スケジュール名"
 
-msgid "The name of the schedule or URL to redirect to after login."
-msgstr "ログイン後にリダイレクトするスケジュール名もしくはURL"
+msgid "The name of the schedule."
+msgstr ""
 
 msgid "Button Label"
 msgstr "ボタンラベル"
 
-msgid "The text to be put on the button that is displayed, for example 'Create Appointment'."
-msgstr "テキストはボタン上に表示されます。例として '予約を作成 '"
+msgid "The text to be displayed on the button, for example 'Create Appointment'."
+msgstr ""
 
 msgid "Button Image"
 msgstr "ボタンイメージ"
@@ -71,3 +71,53 @@ msgstr "もしカスタムドメインネームをSuperSaaSに対して使用す
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
 msgstr "あなたのユーザー名はsupersaasで保存されています。ログインは出来ないと予想出来ますが、動作を続けますか？"
 
+msgid "How would you like to show your SuperSaaS schedule?"
+msgstr ""
+
+msgid "SuperSaaS schedule display"
+msgstr ""
+
+msgid "Show a button that forwards the user to my SuperSaaS calendar"
+msgstr ""
+
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgstr ""
+
+msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgstr ""
+
+msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
+msgstr ""
+
+msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
+msgstr ""
+
+msgid "Paste the JavaScript code here"
+msgstr ""
+
+msgid "The default name of the schedule."
+msgstr ""
+
+msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
+msgstr ""
+
+msgid "Button settings"
+msgstr ""
+
+msgid "Error occured while parsing options. Did you provide options JSON properly?"
+msgstr ""
+
+msgid "Account name can't be blank"
+msgstr ""
+
+msgid "Please provide and account name (not an email)"
+msgstr ""
+
+msgid "API key can't be blank"
+msgstr ""
+
+msgid "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
+msgstr ""
+
+msgid "Link is invalid"
+msgstr ""

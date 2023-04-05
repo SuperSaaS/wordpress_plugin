@@ -173,7 +173,7 @@ function supersaas_button_hook($atts)
         if ($image) {
           $out .= '<input type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
         } else {
-          $out .= '<input type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
+          $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
         }
 
         $out .= '</form><script type="text/javascript">function confirmBooking() {';
@@ -186,7 +186,7 @@ function supersaas_button_hook($atts)
 	      if ($image) {
 		      $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
 	      } else {
-		      $out = '<a href="' . $href . '"><button>' . htmlspecialchars($label) . '</button></a>';
+		      $out = '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
 	      }
       }
     } else {
