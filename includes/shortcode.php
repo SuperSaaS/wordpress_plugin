@@ -33,7 +33,7 @@ function supersaas_button_hook($atts)
   $display_choice = get_option('ss_display_choice', 'regular_btn');
   $widget_script = get_option('ss_widget_script');
   $default_schedule = get_option('ss_schedule');
-  $autologin_enabled = get_option('ss_autologin_enabled', '1');
+  $autologin_enabled = get_option('ss_autologin_enabled'); // one of the following: ("0", "1", "")
   $out = '';
   // Sanitize options provided via shortcode
   $options = str_replace('\'', '"', $options);
@@ -121,7 +121,7 @@ function supersaas_button_hook($atts)
     // Set button text if provided:
     $widget_script = preg_replace("/(?<=\>)[\w\d\s]*(?=\<\/button>)/i", $label, $widget_script);
 
-    // If autologin option enabled and current WP user is logged in:
+    // If autologin option enabled and current WP user is logged-in:
     if(!empty($api_key) && $current_user->ID) {
       // Populate required variables before initializing widget
       $user_login = $current_user->user_login;
@@ -155,7 +155,7 @@ function supersaas_button_hook($atts)
       }
       $api_endpoint = $api_domain . '/api/users';
 
-      // If autologin option enabled and current WP user is logged in:
+      // If autologin option enabled and current WP user is logged-in:
       if ($current_user->ID) {
         //  Generate a hidden form with user data
         $account = str_replace(' ', '_', $account);
@@ -179,12 +179,16 @@ function supersaas_button_hook($atts)
         $out .= "for (i = 0; i < reservedWords.length; i++) {if (reservedWords[i] === '{$user_login}') {return confirm('";
         $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
       } else {
-        // Show a schedule button as simple link
-        $href = "$api_domain/schedule/$account/$final_schedule_name";
-        if ($image) {
-          $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
-        } else {
-          $out = '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
+        // User is not logged-in
+        if($autologin_enabled === "0") {
+          // Show a link to a schedule
+          //  for not logged-in users with 'autologin' either disabled or not setup
+          $href = "$api_domain/schedule/$account/$final_schedule_name";
+          if ($image) {
+            $out .= '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
+          } else {
+            $out .= '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
+          }
         }
       }
     } else {

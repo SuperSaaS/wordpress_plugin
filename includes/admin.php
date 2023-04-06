@@ -22,7 +22,7 @@ function supersaas_register_settings()
 {
   register_setting('supersaas-settings', 'ss_account_name');
   register_setting('supersaas-settings', 'ss_display_choice');
-  register_setting('supersaas-settings', 'ss_autologin_enabled');
+  register_setting('supersaas-settings', 'ss_autologin_enabled', array('sanitize_callback' => 'sanitize_autologin'));
   register_setting('supersaas-settings', 'ss_password'); // NOTE: this is an API KEY, not a user password; the "ss_password" key is used for backwards compatibility
   register_setting('supersaas-settings', 'ss_widget_script');
 
@@ -31,6 +31,8 @@ function supersaas_register_settings()
   register_setting('supersaas-settings', 'ss_button_image');
   register_setting('supersaas-settings', 'ss_domain', 'domain_from_url');
 }
+
+function sanitize_autologin($value) { return $value !== "1" ? "0" : "1"; }
 
 /**
  * Register JS for page
