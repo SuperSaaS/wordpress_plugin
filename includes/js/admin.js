@@ -77,7 +77,7 @@ jQuery(function ($) {
 
     if ($("input[name=ss_display_choice][value=regular_btn]")[0].checked) {
       var buttonImage = $("input[name=ss_button_image]");
-      if(!isValidURL(buttonImage[0].value)) {
+      if(buttonImage[0].value.length > 0 && !isValidURL(buttonImage[0].value)) {
         buttonImage.css( "border-color", "red" );
         buttonImage.nextAll(".error-msg.hidden").removeClass("hidden");
         errors++;
