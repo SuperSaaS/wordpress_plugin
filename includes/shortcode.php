@@ -47,7 +47,13 @@ function supersaas_button_hook($atts)
 
   // Determine a final name of the schedule
   $final_schedule_name = '';
-  if (!empty($default_schedule)) {
+  if (!empty($after)) {
+    $final_schedule_name = $after;
+  }
+  if (!empty($schedule)) {
+    $final_schedule_name = $schedule;
+  }
+  if(empty($schedule) && empty($after) && !empty($default_schedule)) {
     $final_schedule_name = $default_schedule;
   }
 
