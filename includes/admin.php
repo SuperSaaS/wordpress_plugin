@@ -21,7 +21,7 @@ function supersaas_add_admin_menu()
 function supersaas_register_settings()
 {
   register_setting('supersaas-settings', 'ss_account_name');
-  register_setting('supersaas-settings', 'ss_display_choice');
+  register_setting('supersaas-settings', 'ss_display_choice', array('sanitize_callback' => 'sanitize_display_choice'));
   register_setting('supersaas-settings', 'ss_autologin_enabled', array('sanitize_callback' => 'sanitize_autologin'));
   register_setting('supersaas-settings', 'ss_password'); // NOTE: this is an API KEY, not a user password; the "ss_password" key is used for backwards compatibility
   register_setting('supersaas-settings', 'ss_widget_script');
@@ -33,6 +33,11 @@ function supersaas_register_settings()
 }
 
 function sanitize_autologin($value) { return $value !== "1" ? "0" : "1"; }
+
+function sanitize_display_choice($value)
+{
+  return in_array($value, array("regular_btn", "popup_btn")) ? $value : "regular_btn";
+}
 
 /**
  * Register JS for page

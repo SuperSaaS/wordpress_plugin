@@ -136,7 +136,9 @@ function supersaas_button_hook($atts)
       $out .= '</script>';
     }
     $out .= $widget_script;
-  } else {
+  }
+
+  if ($display_choice === 'regular_btn' || empty($display_choice)) {
     if ($account && $api_key) {
       if (!$label) {
         $label = __('Book Now!', 'supersaas');
