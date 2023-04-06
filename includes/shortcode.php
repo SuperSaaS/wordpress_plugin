@@ -17,113 +17,107 @@ function supersaas_button_hook($atts)
   global $current_user;
   wp_get_current_user();
 
-	$defaults_array = array(
-		'label' => get_option('ss_button_label', ''),
-		'image' => get_option('ss_button_image', ''),
-		'options' => '',
-		'after' => '',
-		'schedule' => '',
-	);
+  $defaults_array = array(
+    'label' => get_option('ss_button_label', ''),
+    'image' => get_option('ss_button_image', ''),
+    'options' => '',
+    'after' => '',
+    'schedule' => '',
+  );
 
   extract(shortcode_atts( $defaults_array, $atts, 'supersaas'));
 
   $account = get_option('ss_account_name');
   $api_key = get_option('ss_password');
-	// Backward compatibility for users who will update the plugin without updating settings
+  // Backward compatibility for users who will update the plugin without updating settings
   $display_choice = get_option('ss_display_choice', 'regular_btn');
   $widget_script = get_option('ss_widget_script');
   $default_schedule = get_option('ss_schedule');
-  $autologin_enabled = get_option('ss_autologin_enabled');
-	$out = '';
+  $autologin_enabled = get_option('ss_autologin_enabled', '1');
+  $out = '';
   // Sanitize options provided via shortcode
   $options = str_replace('\'', '"', $options);
-	$options_obj = json_decode($options);
-	if($options && !$options_obj) {
-		// Validate options provided via shortcode
-		$out .= "<p>" . __('Error occured while parsing options. Did you provide options json properly?', 'supersaas') . "<br/> ";
-		$out .= __('Example', 'supersaas') . ": <code> [supersaas options=\"{'menu':'show','view':'card'}\"] </code> </p>";
-		return $out;
-	}
+  $options_obj = json_decode($options);
+  if($options && !$options_obj) {
+    // Validate options provided via shortcode
+    $out .= "<p>" . __('Error occured while parsing options. Did you provide options json properly?', 'supersaas') . "<br/> ";
+    $out .= __('Example', 'supersaas') . ": <code> [supersaas options=\"{'menu':'show','view':'card'}\"] </code> </p>";
+    return $out;
+  }
 
-	// Determine a final name of the schedule
-	$final_schedule_name = '';
-	if (!empty($after)) {
-		$final_schedule_name = $after;
-	}
-	if (!empty($schedule)) {
-		$final_schedule_name = $schedule;
-	}
-	if(empty($schedule) && empty($after) && !empty($default_schedule)) {
-		$final_schedule_name = $default_schedule;
-	}
+  // Determine a final name of the schedule
+  $final_schedule_name = '';
+  if (!empty($default_schedule)) {
+    $final_schedule_name = $default_schedule;
+  }
 
   if ($display_choice === 'popup_btn') {
-		if(!empty($final_schedule_name)) {
-			// Match and replace {account_id:account_name} with {account_name} to trigger behaviour where
-			//  schedule name can be passed without id
-			preg_match_all("/(?<=SuperSaaS\(\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
-			foreach ($id_matches as &$match_value) {
-				foreach ($match_value as &$submatch_value) {
-					list($account_id, $name) = explode(':', $submatch_value);
-					$widget_script = str_replace($submatch_value, $name, $widget_script);
-				}
-			}
+    if(!empty($final_schedule_name)) {
+      // Match and replace {account_id:account_name} with {account_name} to trigger behaviour where
+      //  schedule name can be passed without id
+      preg_match_all("/(?<=SuperSaaS\(\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
+      foreach ($id_matches as &$match_value) {
+        foreach ($match_value as &$submatch_value) {
+          list($account_id, $name) = explode(':', $submatch_value);
+          $widget_script = str_replace($submatch_value, $name, $widget_script);
+        }
+      }
 
-			// Match and update schedule (unless null is provided)
-			preg_match_all("/(?<=,\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
-			foreach ($id_matches as &$match_value) {
-				foreach ($match_value as &$submatch_value) {
-					list($schedule_id, $name) = explode(':', $submatch_value);
-					$widget_script = str_replace($submatch_value, $final_schedule_name, $widget_script);
-					$widget_script = str_replace($schedule_id, $final_schedule_name, $widget_script);
-				}
-			}
+      // Match and update schedule (unless null is provided)
+      preg_match_all("/(?<=,\")[0-9]+:\w+(?=\")/i", $widget_script, $id_matches);
+      foreach ($id_matches as &$match_value) {
+        foreach ($match_value as &$submatch_value) {
+          list($schedule_id, $name) = explode(':', $submatch_value);
+          $widget_script = str_replace($submatch_value, $final_schedule_name, $widget_script);
+          $widget_script = str_replace($schedule_id, $final_schedule_name, $widget_script);
+        }
+      }
 
-			// Match and update schedule (when null is provided)
-			$widget_script = preg_replace("/SuperSaaS\([\s\S]*\Knull/i", "\"$final_schedule_name\"", $widget_script);
-		} else {
-			// When final schedule name is empty, trigger a default behaviour for `/schedule/{account_name}`
-			// which here basically mean - clean the schedule name from $widget_script if provided
-			preg_match_all("/(?<=,)\"[0-9]+:\w+\"/i", $widget_script, $id_matches);
-			foreach ($id_matches as &$match_value) {
-				foreach ($match_value as &$submatch_value) {
-					list($schedule_id, $name) = explode(':', $submatch_value);
-					$widget_script = str_replace($submatch_value, "null", $widget_script);
-					$widget_script = str_replace($schedule_id, "null", $widget_script);
-				}
-			}
-		}
+      // Match and update schedule (when null is provided)
+      $widget_script = preg_replace("/SuperSaaS\([\s\S]*\Knull/i", "\"$final_schedule_name\"", $widget_script);
+    } else {
+      // When final schedule name is empty, trigger a default behaviour for `/schedule/{account_name}`
+      // which here basically mean - clean the schedule name from $widget_script if provided
+      preg_match_all("/(?<=,)\"[0-9]+:\w+\"/i", $widget_script, $id_matches);
+      foreach ($id_matches as &$match_value) {
+        foreach ($match_value as &$submatch_value) {
+          list($schedule_id, $name) = explode(':', $submatch_value);
+          $widget_script = str_replace($submatch_value, "null", $widget_script);
+          $widget_script = str_replace($schedule_id, "null", $widget_script);
+        }
+      }
+    }
 
-		// Match and override widget options
-	  preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
-	  foreach ($widget_options_matches as &$match_value) {
-		  foreach ($match_value as &$submatch_value) {
-			  $default_options_obj = json_decode($submatch_value);
-				$options_final = array();
-			  if (!empty($options)) {
-				  // Merge options provided in widget_script with options provided via shortcode
-				  $options_final = array_merge((array) $default_options_obj, (array) $options_obj);
-			  }
+    // Match and override widget options
+    preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
+    foreach ($widget_options_matches as &$match_value) {
+      foreach ($match_value as &$submatch_value) {
+        $default_options_obj = json_decode($submatch_value);
+        $options_final = array();
+        if (!empty($options)) {
+          // Merge options provided in widget_script with options provided via shortcode
+          $options_final = array_merge((array) $default_options_obj, (array) $options_obj);
+        }
 
-				if(gettype($atts) == "array") {
-					foreach ($atts as $key => $value) {
-						// Consider any non-recognized shortcode attribute key as an override to widget options
-						if(!in_array($key, array_keys($defaults_array))) {
-							$options_final[$key] = $value;
-						}
-					}
-				}
-			  $options = json_encode($options_final);
-			  $widget_script = str_replace($submatch_value, $options, $widget_script);
-		  }
-	  }
+        if(gettype($atts) == "array") {
+          foreach ($atts as $key => $value) {
+            // Consider any non-recognized shortcode attribute key as an override to widget options
+            if(!in_array($key, array_keys($defaults_array))) {
+              $options_final[$key] = $value;
+            }
+          }
+        }
+        $options = json_encode($options_final);
+        $widget_script = str_replace($submatch_value, $options, $widget_script);
+      }
+    }
 
-		// Set button text if provided:
-	  $widget_script = preg_replace("/(?<=\>)[\w\d\s]*(?=\<\/button>)/i", $label, $widget_script);
+    // Set button text if provided:
+    $widget_script = preg_replace("/(?<=\>)[\w\d\s]*(?=\<\/button>)/i", $label, $widget_script);
 
-		// If autologin option enabled and current WP user is logged in:
-    if($autologin_enabled && $current_user->ID) {
-	    // Populate required variables before initializing widget
+    // If autologin option enabled and current WP user is logged in:
+    if(!empty($api_key) && $current_user->ID) {
+      // Populate required variables before initializing widget
       $user_login = $current_user->user_login;
 
       $out .= '<script type="text/javascript">';
@@ -136,9 +130,7 @@ function supersaas_button_hook($atts)
       $out .= '</script>';
     }
     $out .= $widget_script;
-  }
-
-  if ($display_choice === 'regular_btn') {
+  } else {
     if ($account && $api_key) {
       if (!$label) {
         $label = __('Book Now!', 'supersaas');
@@ -157,9 +149,9 @@ function supersaas_button_hook($atts)
       }
       $api_endpoint = $api_domain . '/api/users';
 
-	    // If autologin option enabled and current WP user is logged in:
-      if ($current_user->ID && $autologin_enabled) {
-	      //  Generate a hidden form with user data
+      // If autologin option enabled and current WP user is logged in:
+      if ($current_user->ID) {
+        //  Generate a hidden form with user data
         $account = str_replace(' ', '_', $account);
         $out .= '<form method="post" action=' . $api_endpoint . '>';
         $out .= '<input type="hidden" name="account" value="' . $account . '"/>';
@@ -173,7 +165,7 @@ function supersaas_button_hook($atts)
         if ($image) {
           $out .= '<input type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
         } else {
-          $out .= '<input type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
+          $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
         }
 
         $out .= '</form><script type="text/javascript">function confirmBooking() {';
@@ -182,12 +174,12 @@ function supersaas_button_hook($atts)
         $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
       } else {
         // Show a schedule button as simple link
-	      $href = "$api_domain/schedule/$account/$final_schedule_name";
-	      if ($image) {
-		      $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
-	      } else {
-		      $out = '<a href="' . $href . '"><button>' . htmlspecialchars($label) . '</button></a>';
-	      }
+        $href = "$api_domain/schedule/$account/$final_schedule_name";
+        if ($image) {
+          $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
+        } else {
+          $out = '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
+        }
       }
     } else {
       $out .= __('(Setup incomplete)', 'supersaas');
