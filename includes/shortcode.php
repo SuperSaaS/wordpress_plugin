@@ -15,7 +15,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 function generate_schedule_link($api_domain, $account, $final_schedule_name, $label, $image)
 {
   $href = "$api_domain/schedule/$account/$final_schedule_name";
-  if(strpos($final_schedule_name, "https://") === 0) {
+  if(strpos($final_schedule_name, "http") === 0) {
     $href = $final_schedule_name;
   }
   if(strpos($final_schedule_name, "/") === 0) {
