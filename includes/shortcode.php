@@ -12,6 +12,22 @@ defined('ABSPATH') or die('No script kiddies please!');
  *
  * @param array $atts SuperSaaS shortcode attributes.
  */
+function generate_schedule_link($api_domain, $account, $final_schedule_name, $label, $image)
+{
+  $href = "$api_domain/schedule/$account/$final_schedule_name";
+  if(strpos($final_schedule_name, "http") === 0) {
+    $href = $final_schedule_name;
+  }
+  if(strpos($final_schedule_name, "/") === 0) {
+    $href = "$api_domain$final_schedule_name";
+  }
+  if ($image) {
+    return '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
+  } else {
+    return '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
+  }
+}
+
 function supersaas_button_hook($atts)
 {
   global $current_user;
@@ -33,7 +49,7 @@ function supersaas_button_hook($atts)
   $display_choice = get_option('ss_display_choice', 'regular_btn');
   $widget_script = get_option('ss_widget_script');
   $default_schedule = get_option('ss_schedule');
-  $autologin_enabled = get_option('ss_autologin_enabled', '1');
+  $autologin_enabled = get_option('ss_autologin_enabled'); // one of the following: ("0", "1", "")
   $out = '';
   // Sanitize options provided via shortcode
   $options = str_replace('\'', '"', $options);
@@ -121,7 +137,7 @@ function supersaas_button_hook($atts)
     // Set button text if provided:
     $widget_script = preg_replace("/(?<=\>)[\w\d\s]*(?=\<\/button>)/i", $label, $widget_script);
 
-    // If autologin option enabled and current WP user is logged in:
+    // If autologin option enabled and current WP user is logged-in:
     if(!empty($api_key) && $current_user->ID) {
       // Populate required variables before initializing widget
       $user_login = $current_user->user_login;
@@ -136,8 +152,10 @@ function supersaas_button_hook($atts)
       $out .= '</script>';
     }
     $out .= $widget_script;
-  } else {
-    if ($account && $api_key) {
+  }
+
+  if ($display_choice === 'regular_btn' || empty($display_choice)) {
+    if ($account) {
       if (!$label) {
         $label = __('Book Now!', 'supersaas');
       }
@@ -155,37 +173,47 @@ function supersaas_button_hook($atts)
       }
       $api_endpoint = $api_domain . '/api/users';
 
-      // If autologin option enabled and current WP user is logged in:
       if ($current_user->ID) {
-        //  Generate a hidden form with user data
-        $account = str_replace(' ', '_', $account);
-        $out .= '<form method="post" action=' . $api_endpoint . '>';
-        $out .= '<input type="hidden" name="account" value="' . $account . '"/>';
-        $out .= '<input type="hidden" name="id" value="' . $current_user->ID . 'fk"/>';
-        $out .= '<input type="hidden" name="user[name]" value="' . htmlspecialchars($user_login) . '"/>';
-        $out .= '<input type="hidden" name="user[full_name]" value="' . htmlspecialchars($current_user->user_firstname . ' ' . $current_user->user_lastname) . '"/>';
-        $out .= '<input type="hidden" name="user[email]" value="' . htmlspecialchars($current_user->user_email) . '"/>';
-        $out .= '<input type="hidden" name="checksum" value="' . md5("$account$api_key$user_login") . '"/>';
-        $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $final_schedule_name)) . '"/>';
+        // User is logged-in
+        if($autologin_enabled !== "0") {
+          // Autologin isn't explicitly disabled (manually enabled or upgrading user)
+          if($api_key) {
+            // If API key is present and 'autologin' isn't explicitly disabled:
+            //  Generate a hidden form with user data
+            $account = str_replace(' ', '_', $account);
+            $out .= '<form method="post" action=' . $api_endpoint . '>';
+            $out .= '<input type="hidden" name="account" value="' . $account . '"/>';
+            $out .= '<input type="hidden" name="id" value="' . $current_user->ID . 'fk"/>';
+            $out .= '<input type="hidden" name="user[name]" value="' . htmlspecialchars($user_login) . '"/>';
+            $out .= '<input type="hidden" name="user[full_name]" value="' . htmlspecialchars($current_user->user_firstname . ' ' . $current_user->user_lastname) . '"/>';
+            $out .= '<input type="hidden" name="user[email]" value="' . htmlspecialchars($current_user->user_email) . '"/>';
+            $out .= '<input type="hidden" name="checksum" value="' . md5("$account$api_key$user_login") . '"/>';
+            $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $final_schedule_name)) . '"/>';
 
-        if ($image) {
-          $out .= '<input type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
+            if ($image) {
+              $out .= '<input type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
+            } else {
+              $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
+            }
+
+            $out .= '</form><script type="text/javascript">function confirmBooking() {';
+            $out .= "var reservedWords = ['administrator','supervise','supervisor','superuser','user','admin','supersaas'];";
+            $out .= "for (i = 0; i < reservedWords.length; i++) {if (reservedWords[i] === '{$user_login}') {return confirm('";
+            $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
+          } else {
+            $out .= __('(Setup incomplete)', 'supersaas');
+          }
         } else {
-          $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
+          // Show a link to a schedule for logged-in users with 'autologin' explicitly disabled
+          $out .= generate_schedule_link($api_domain, $account, $final_schedule_name, $label, $image);
         }
-
-        $out .= '</form><script type="text/javascript">function confirmBooking() {';
-        $out .= "var reservedWords = ['administrator','supervise','supervisor','superuser','user','admin','supersaas'];";
-        $out .= "for (i = 0; i < reservedWords.length; i++) {if (reservedWords[i] === '{$user_login}') {return confirm('";
-        $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
       } else {
-        // Show a schedule button as simple link
-        $href = "$api_domain/schedule/$account/$final_schedule_name";
-        if ($image) {
-          $out = '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
-        } else {
-          $out = '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
+        // User is non-logged-in
+        if($autologin_enabled === "0") {
+          // Show a link to a schedule for non-logged-in users with 'autologin' explicitly disabled
+          $out .= generate_schedule_link($api_domain, $account, $final_schedule_name, $label, $image);
         }
+        // Show nothing to non-logged-in users when 'autologin' isn't explicitly disabled
       }
     } else {
       $out .= __('(Setup incomplete)', 'supersaas');
