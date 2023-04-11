@@ -46,81 +46,14 @@ SuperSaaS is available in over 28 languages. Check out the <a href="https://www.
 
 == Changelog ==
 
-= 1.0 =
-* First release
+= 2.1.3 =
+* Add backward compatibility with features from version 1.x.x
 
-= 1.5 =
-* Added localizations
-* Added a short code
+= 2.1.2 =
+* Restore the shortcode overrides for the schedule
 
-= 1.6 =
-* More localizations
-
-= 1.7 =
-* More localizations
-
-= 1.7 =
-* More localizations
-
-= 1.8 =
-* Improved coding style
-* Custom domain name accepts also URLs
-
-= 1.9 =
-* Tested latest WordPress version
-
-= 1.9.1 =
-* Update translation
-
-= 1.9.2 =
-* Mark schedule name as non-optional
-
-= 1.9.3 =
-* Bump version to support Wordpress 4.7
-
-= 1.9.4 =
-* Make supersaas.com API calls use HTTPs always
-
-= 1.9.5 =
-* Dynamically detect request protocol, it will work even with proxy TLS termination
-
-= 1.9.6 =
-* Tested latest WordPress version
-
-= 1.9.7 =
-* More localizations and tested latest WordPress version
-
-= 1.9.8 =
-* Tested latest WordPress version
-
-= 2.0.0 =
-* Use account API Key instead of password for authentication
-
-= 2.0.1 =
-* Change deprecated function, improve https detection
-
-= 2.0.2 =
-* Tested latest WordPress version 5.4
-
-= 2.0.3 =
-* Forces the button to use https for customers still using http sites
-
-= 2.0.4 =
-* Tested latest WordPress version 5.6
-
-= 2.0.5 =
-* Tested latest WordPress version 5.8
-
-= 2.0.6 =
-* Update translation
-
-= 2.0.7 =
-* Tested latest WordPress version 5.9
-
-= 2.0.8 =
-* Tested latest WordPress version 6.1
-
-== Upgrade Notice ==
+= 2.1.1 =
+* Hotfix for upgrading users
 
 = 2.1 =
 * Select between displaying a button and a highly customizable widget
@@ -129,11 +62,73 @@ SuperSaaS is available in over 28 languages. Check out the <a href="https://www.
 * Add helpful guidance with thorough validations on the plugin settings screen
 * Tested latest WordPress version 6.2
 
-= 2.1.1 =
-* Hotfix for upgrading users
+= 2.0.8 =
+* Tested latest WordPress version 6.1
 
-= 2.1.2 =
-* Restore the shortcode overrides for the schedule
+= 2.0.7 =
+* Tested latest WordPress version 5.9
 
-= 2.1.3 =
-* Add backward compatibility with features from version 1.x.x
+= 2.0.6 =
+* Update translation
+
+= 2.0.5 =
+* Tested latest WordPress version 5.8
+
+= 2.0.4 =
+* Tested latest WordPress version 5.6
+
+= 2.0.3 =
+* Forces the button to use https for customers still using http sites
+
+= 2.0.2 =
+* Tested latest WordPress version 5.4
+
+= 2.0.1 =
+* Change deprecated function, improve https detection
+
+= 2.0.0 =
+* Use account API Key instead of password for authentication
+
+= 1.9.8 =
+* Tested latest WordPress version
+
+= 1.9.7 =
+* More localizations and tested latest WordPress version
+
+= 1.9.6 =
+* Tested latest WordPress version
+
+= 1.9.5 =
+* Dynamically detect request protocol, it will work even with proxy TLS termination
+
+= 1.9.4 =
+* Make supersaas.com API calls use HTTPs always
+
+= 1.9.3 =
+* Bump version to support Wordpress 4.7
+
+= 1.9.2 =
+* Mark schedule name as non-optional
+
+= 1.9.1 =
+* Update translation
+
+= 1.9 =
+* Tested latest WordPress version
+
+= 1.8 =
+* Improved coding style
+* Custom domain name accepts also URLs
+
+= 1.7 =
+* More localizations
+
+= 1.6 =
+* More localizations
+
+= 1.5 =
+* Added localizations
+* Added a short code
+
+= 1.0 =
+* First release
