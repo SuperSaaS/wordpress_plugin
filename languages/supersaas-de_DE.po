@@ -15,9 +15,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Dieses Modul zeigt ein SuperSaaS-Terminbuchungstool an, entweder innerhalb eines Rahmens oder durch Anklicken einer Schaltfläche mit dem Button ‘Jetzt buchen‘. Optional kann es den Benutzer bei SuperSaaS mit seinem WordPress-Benutzernamen anmelden und die Benutzerinformationen bei SuperSaaS nach Bedarf erstellen oder aktualisieren. So müssen sich die Benutzer nicht zweimal anmelden. Funktioniert sowohl mit der kostenlosen als auch mit der bezahlten Version von SuperSaaS."
 
-msgid "Book Now!"
+msgid "Book now!"
 msgstr "Jetzt buchen!"
 
 msgid "www.supersaas.com"
@@ -33,7 +33,7 @@ msgid "SuperSaaS account name"
 msgstr "SuperSaaS Kontoname"
 
 msgid "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
-msgstr "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
+msgstr "TDer Kontoname Ihres SuperSaaS-Kontos (nicht Ihre E-Mail-Adresse). Wenn Sie noch keinen Kontonamen haben, erstellen Sie bitte einen unter supersaas.de"
 
 msgid "SuperSaaS API Key"
 msgstr "SuperSaaS API Schlüssel"
@@ -45,13 +45,13 @@ msgid "Schedule name"
 msgstr "Name vom Terminbuchungskalender"
 
 msgid "The name of the schedule."
-msgstr "The name of the schedule."
+msgstr "Der Name des Terminbuchungskalenders."
 
 msgid "Button Label"
 msgstr "Button Label"
 
 msgid "The text to be displayed on the button, for example 'Create Appointment'."
-msgstr "The text to be displayed on the button, for example 'Create Appointment'."
+msgstr "Der Text, der auf der Schaltfläche des Button angezeigt werden soll, z. B. 'Termin erstellen'."
 
 msgid "Button Image"
 msgstr "Button Grafik"
@@ -72,52 +72,52 @@ msgid "Your username is a supersaas reserved word. You might not be able to logi
 msgstr "Ihr Benutzername ist für SuperSaaS reserviert. Sie können sich damit vielleicht nicht einloggen. Möchten Sie weiter fortfahren?"
 
 msgid "How would you like to show your SuperSaaS schedule?"
-msgstr "How would you like to show your SuperSaaS schedule?"
+msgstr "Wie möchten Sie Ihren SuperSaaS-Terminbuchungskalender zeigen?"
 
 msgid "SuperSaaS schedule display"
-msgstr "SuperSaaS schedule display"
+msgstr "SuperSaaS-Terminbuchungskalender Darstellung"
 
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
-msgstr "Show a button that forwards the user to my SuperSaaS calendar"
+msgstr "Eine Schaltfläche als Button zeigen, die den Benutzer zu meinem SuperSaaS-Terminbuchungskalender weiterleitet"
 
 msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
-msgstr "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgstr "Zeige einen SuperSaaS-Kalender integriert in meine Wordpress-Seite in einem Fenster oder über eine Schaltfläche als Popup-Button"
 
 msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
-msgstr "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgstr "Falls sich Benutzer bei WordPress einloggen, sollen diese gleichzeitig mit ihrem WordPress-Benutzernamen in ihr SuperSaaS-Konto eingeloggt werden."
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
-msgstr "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
+msgstr "Das automatische Einloggen des Benutzers verlangt Ihren <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API Schlüssel</a>"
 
 msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
 msgstr "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
 
 msgid "Paste the JavaScript code here"
-msgstr "Paste the JavaScript code here"
+msgstr "Fügen Sie den JavaScript-Code hier ein"
 
 msgid "The default name of the schedule."
-msgstr "The default name of the schedule."
+msgstr "Der Standardname des Terminbuchungsplans."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
-msgstr "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
+msgstr "Leer lassen bei <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>Standard-Kalender</a> (kann in Shortcode überschrieben werden)"
 
 msgid "Button settings"
-msgstr "Button settings"
+msgstr "Button Einstellungen"
 
 msgid "Error occured while parsing options. Did you provide options JSON properly?"
-msgstr "Error occured while parsing options. Did you provide options JSON properly?"
+msgstr "Ein Fehler ist aufgetreten beim Parsen der Optionen. Haben Sie die JSON-Optionen richtig angegeben?"
 
 msgid "Account name can't be blank"
-msgstr "Account name can't be blank"
+msgstr "Der Kontoname darf nicht leer sein"
 
 msgid "Please provide and account name (not an email)"
-msgstr "Please provide and account name (not an email)"
+msgstr "Bitte geben Sie einen Kontonamen an (keine E-Mail)"
 
 msgid "API key can't be blank"
-msgstr "API key can't be blank"
+msgstr "API-Schlüssel kann nicht leer sein"
 
 msgid "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
-msgstr "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
+msgstr "Der Code für das Widget ist ungültig. Sind Sie sicher, dass Sie den generierte Code <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>hier</a> eingefügt haben?"
 
 msgid "Link is invalid"
-msgstr "Link is invalid"
+msgstr "Link ist ungültig"
