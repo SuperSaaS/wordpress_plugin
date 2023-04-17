@@ -80,7 +80,7 @@ msgstr "Visualizzazione del calendario SuperSaaS"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Mostra un pulsante che porta l'utente al mio calendario SuperSaaS"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site qinside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
 msgstr "Integra il calendario SuperSaaS nel mio sito Wordpress all'interno di un frame o con un pulsante popup"
 
 msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
