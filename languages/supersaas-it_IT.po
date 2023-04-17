@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: http://www.supersaas.it/info/contact\n"
 "POT-Creation-Date: 2010-05-29 21:43+0200\n"
-"PO-Revision-Date: 2015-06-11 01:05+0100\n"
+"PO-Revision-Date: 2023-04-17 15:00+0100\n"
 "Last-Translator: SuperSaaS <supporto@supersaas.it>\n"
 "Language-Team: SuperSaaS <supersaas@supersaas.com>\n"
 "MIME-Version: 1.0\n"
@@ -70,6 +70,7 @@ msgstr "Se hai creato un nome di dominio personalizzato che punta a SuperSaaS, i
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
 msgstr "Il tuo nome utente è riservato. Potresti non essere in grado di effettuare l'accesso. Vuoi continuare?"
+
 msgid "How would you like to show your SuperSaaS schedule?"
 msgstr "Come vuoi che venga visualizzato il tuo calendario SuperSaaS?"
 
