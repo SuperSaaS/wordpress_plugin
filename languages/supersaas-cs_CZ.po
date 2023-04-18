@@ -110,7 +110,7 @@ msgstr "Při analýze kódu došlo k chybě. Zadali jste správně kód JSON?"
 msgid "Account name can't be blank"
 msgstr "Jméno účtu nemůže zůstat prázdné"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Prosím poskytněte jméno účtu (nikoliv email)"
 
 msgid "API key can't be blank"

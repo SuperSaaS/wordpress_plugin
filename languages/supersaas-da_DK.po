@@ -110,7 +110,7 @@ msgstr "Der opstod desværre en fejl. Fik du installeret JSON korrekt?"
 msgid "Account name can't be blank"
 msgstr "Konto navn må ikke være blankt"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Venligst indsæt et konto navn (ikke en email adresse)"
 
 msgid "API key can't be blank"

@@ -110,7 +110,7 @@ msgstr "オプションの解析中にエラーが発生しました。オプシ
 msgid "Account name can't be blank"
 msgstr "アカウント名を空白にすることはできません。"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "アカウント名を入力してください。(電子メールではありません)"
 
 msgid "API key can't be blank"

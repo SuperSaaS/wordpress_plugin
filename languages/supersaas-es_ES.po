@@ -110,8 +110,8 @@ msgstr "Error occured while parsing options. Did you provide options JSON proper
 msgid "Account name can't be blank"
 msgstr "Account name can't be blank"
 
-msgid "Please provide and account name (not an email)"
-msgstr "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
+msgstr "Please provide an account name (not an email)"
 
 msgid "API key can't be blank"
 msgstr "API key can't be blank"

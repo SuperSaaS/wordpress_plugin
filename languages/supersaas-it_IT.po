@@ -110,7 +110,7 @@ msgstr "Errore durante la lettura delle opzioni. Hai fornito correttamente le op
 msgid "Account name can't be blank"
 msgstr "Nome account non può essere vuoto"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Per favore fornisci un nome account (non un indirizzo email)"
 
 msgid "API key can't be blank"

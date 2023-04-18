@@ -97,7 +97,7 @@ function supersaas_options()
                required
         />
         <span class="error-msg error-msg-1 hidden" style="color: red"> <?php _e("Account name can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
-        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please provide and account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
+        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please provide an account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         <br/>
       </p>
 

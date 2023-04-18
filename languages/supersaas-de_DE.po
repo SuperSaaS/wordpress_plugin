@@ -110,7 +110,7 @@ msgstr "Ein Fehler ist aufgetreten beim Parsen der Optionen. Haben Sie die JSON-
 msgid "Account name can't be blank"
 msgstr "Der Kontoname darf nicht leer sein"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Bitte geben Sie einen Kontonamen an (keine E-Mail)"
 
 msgid "API key can't be blank"

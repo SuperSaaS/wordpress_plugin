@@ -110,7 +110,7 @@ msgstr "Er is een fout opgetreden. Klopt de JSON wel?"
 msgid "Account name can't be blank"
 msgstr "De accountnaam moet ingevuld worden"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Vul alstublieft een accounnaam in (geen emailadres)"
 
 msgid "API key can't be blank"

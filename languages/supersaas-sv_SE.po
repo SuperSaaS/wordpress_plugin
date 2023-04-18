@@ -110,7 +110,7 @@ msgstr "De angivna alternativen fungerar inte. Kontrollera att JSON-värden ange
 msgid "Account name can't be blank"
 msgstr "Kontonamn måste anges"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Ange ett kontonamn (inte en e-postadress)"
 
 msgid "API key can't be blank"
