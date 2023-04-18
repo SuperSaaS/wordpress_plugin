@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Dette modul fra bookingsystemet SuperSaaS kan bruges, enten via en ramme (iFrame), eller ved at klikke på knappen: ‘Bestil nu‘. Dertil kommer, at du som administrator kan oprette en proces, hvor brugeren logger ind på SuperSaaS ved hjælp af deres WordPress brugernavn. Alternativt skal dine brugere oprette et nyt brugernavn i SuperSaaS. Hvilken løsning, du vælger, er valgfrit. Optimalt er i de fleste tilfælde, at dine brugere kun logger ind én gang. Denne funktionalitet virker både i den gratis og betalte version af SuperSaaS."
 
 msgid "Book Now!"
 msgstr "Book nu"
