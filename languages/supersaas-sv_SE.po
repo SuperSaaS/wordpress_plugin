@@ -68,7 +68,7 @@ msgstr "Eget domännamn"
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
 msgstr "Om du har ett eget domännamn som pekar till SuperSaaS, ange det här. Kan lämnas tomt."
 
-msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgid "Your username is a SuperSaaS reserved word. You might not be able to log in. Do you want to continue?"
 msgstr "Användarnamnet du använder i Wordpress är ett upptaget ord i SuperSaaS. Du kanske inte kommer att kunna logga in. Vill du fortsätta?"
 
 msgid "How would you like to show your SuperSaaS schedule?"

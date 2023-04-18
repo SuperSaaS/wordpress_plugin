@@ -68,7 +68,7 @@ msgstr "Název vaší domény"
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
 msgstr "Pokud jste si nastavili pro rezervační systém vaši vlastní doménu , vložte její název sem. Může zůstat prázdné"
 
-msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgid "Your username is a SuperSaaS reserved word. You might not be able to log in. Do you want to continue?"
 msgstr "Použité uživatelské jméno je zabrané pro supersaas. Nebude možné se s ním přihlásit. Chcete pokračovat?"
 
 msgid "How would you like to show your SuperSaaS schedule?"

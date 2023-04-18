@@ -199,7 +199,7 @@ function supersaas_button_hook($atts)
             $out .= '</form><script type="text/javascript">function confirmBooking() {';
             $out .= "var reservedWords = ['administrator','supervise','supervisor','superuser','user','admin','supersaas'];";
             $out .= "for (i = 0; i < reservedWords.length; i++) {if (reservedWords[i] === '{$user_login}') {return confirm('";
-            $out .= __('Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?', 'supersaas') . "');}}}</script>";
+            $out .= __('Your username is a SuperSaaS reserved word. You might not be able to log in. Do you want to continue?', 'supersaas') . "');}}}</script>";
           } else {
             $out .= __('(Setup incomplete)', 'supersaas');
           }

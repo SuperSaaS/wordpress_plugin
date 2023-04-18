@@ -68,7 +68,7 @@ msgstr "Nome di dominio personalizzato"
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
 msgstr "Se hai creato un nome di dominio personalizzato che punta a SuperSaaS, inseriscilo qui. Può essere lasciato vuoto."
 
-msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgid "Your username is a SuperSaaS reserved word. You might not be able to log in. Do you want to continue?"
 msgstr "Il tuo nome utente è riservato. Potresti non essere in grado di effettuare l'accesso. Vuoi continuare?"
 
 msgid "How would you like to show your SuperSaaS schedule?"
