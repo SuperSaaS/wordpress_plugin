@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: http://www.supersaas.nl/info/contact\n"
 "POT-Creation-Date: 2010-05-29 21:43+0200\n"
-"PO-Revision-Date:  2010-05-29 21:43+0200\n"
+"PO-Revision-Date:  2023-04-18 15:00+0200\n"
 "Last-Translator: SuperSaaS <kontakt@supersaas.dk>\n"
 "Language-Team: SuperSaaS <kontakt@supersaas.dk>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgid "www.supersaas.com"
 msgstr "www.supersaas.dk"
 
 msgid "(Setup incomplete)"
-msgstr "(Modul opsætning ikke færdig)"
+msgstr "(Modul opsætning er ikke færdig)"
 
 msgid "SuperSaaS Settings"
 msgstr "SuperSaaS indstillinger"
@@ -33,7 +33,7 @@ msgid "SuperSaaS account name"
 msgstr "SuperSaaS konto navn"
 
 msgid "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
-msgstr "The account name of your SuperSaaS account (not your email address). If you don't have an account name yet then please create one at supersaas.com."
+msgstr "Dit SuperSaaS konto navn (ikke din email addresse). Har du ikke et konto navn endnu, så venligt opret et, via supersaas.dk"
 
 msgid "SuperSaaS API Key"
 msgstr "SuperSaaS adgangskode"
@@ -42,16 +42,16 @@ msgid "The API key for your SuperSaaS account."
 msgstr "Adgangskoden for administratoren af din SuperSaaS konto"
 
 msgid "Schedule name"
-msgstr "Navn på din plan"
+msgstr "Navn på din kalender"
 
 msgid "The name of the schedule."
-msgstr "The name of the schedule."
+msgstr "Navnet på din kalender."
 
 msgid "Button Label"
 msgstr "Tekst på knap"
 
 msgid "The text to be displayed on the button, for example 'Create Appointment'."
-msgstr "The text to be displayed on the button, for example 'Create Appointment'."
+msgstr "Teksten som skal vises på knappen, eksempelvis 'Opret aftale nu'."
 
 msgid "Button Image"
 msgstr "Billede til knap"
@@ -60,7 +60,7 @@ msgid "optional"
 msgstr "valgfrit"
 
 msgid "Location of an image file to use as the button. Can be left blank."
-msgstr "Placering for billede filen, som bruges på knappen"
+msgstr "Placering af billede filen, som bruges på knappen"
 
 msgid "Custom domain name"
 msgstr "Skræddersyet domæne navn"
@@ -69,55 +69,55 @@ msgid "If you created a custom domain name that points to SuperSaaS enter it her
 msgstr "Hvis du ændrede URL til dit eget domæne navn, som skal pege på SuperSaaS, indtaster du det her"
 
 msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
-msgstr "Dit brugernavn er et af SuperSaaS reserveret ord. Derfor kan du måske ikke logge ind. Ønsker du at fortsætte?"
+msgstr "Dit brugernavn er et ord, som SuperSaaS har brugt. Derfor kan du måske ikke logge ind. Ønsker du at fortsætte?"
 
 msgid "How would you like to show your SuperSaaS schedule?"
-msgstr "How would you like to show your SuperSaaS schedule?"
+msgstr "Hvordan vil du gerne vise din SuperSaaS kalender?"
 
 msgid "SuperSaaS schedule display"
-msgstr "SuperSaaS schedule display"
+msgstr "SuperSaaS kalender visning"
 
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
-msgstr "Show a button that forwards the user to my SuperSaaS calendar"
+msgstr "Vis en knap, som videresender brugerne til min SuperSaaS kalender"
 
 msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
-msgstr "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgstr "Vis en SuperSaaS kalender, som er integreret med mit Wordpress website, indsat i en ramme (iFrame), eller via en popup knap"
 
 msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
-msgstr "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgstr "Er brugeren logget ind via WordPress, log brugeren ind på din SuperSaaS konto, via brugerens WordPress brugernavn"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
-msgstr "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
+msgstr "Automatisk bruger log ind, kræver at du som administrator bruger: <a href='https://www.supersaas.dk/accounts/edit#api_key' target='_blank'>API key</a>"
 
 msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
-msgstr "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
+msgstr "Indsæt JavaScript <a href='https://www.supersaas.dk/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> , der er genereret på din SuperSaaS side."
 
 msgid "Paste the JavaScript code here"
-msgstr "Paste the JavaScript code here"
+msgstr "Indsæt din JavaScript kode her"
 
 msgid "The default name of the schedule."
-msgstr "The default name of the schedule."
+msgstr "Standard navn på kalenderen."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
-msgstr "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
+msgstr "Efterlad blank til <a href='https://www.supersaas.dk/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (kan evt. overskrives via en såkaldt shortcode)"
 
 msgid "Button settings"
-msgstr "Button settings"
+msgstr "Knap opsætning"
 
 msgid "Error occured while parsing options. Did you provide options JSON properly?"
-msgstr "Error occured while parsing options. Did you provide options JSON properly?"
+msgstr "Der opstod desværre en fejl. Fik du installeret JSON korrekt?"
 
 msgid "Account name can't be blank"
-msgstr "Account name can't be blank"
+msgstr "Konto navn må ikke være blankt"
 
 msgid "Please provide and account name (not an email)"
-msgstr "Please provide and account name (not an email)"
+msgstr "Venligst indsæt et konto navn (ikke en email adresse)"
 
 msgid "API key can't be blank"
-msgstr "API key can't be blank"
+msgstr "API nøglen må ikke være blank"
 
 msgid "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
-msgstr "Widget script is invalid. Are you sure that you’ve pasted script generated <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
+msgstr "Widget scriptet er ugyldigt. Er du sikker på, at du har indsat de genererede script? <a href='https://www.supersaas.dk/info/doc/integration/integration_with_widget' target='_blank'>here</a>?"
 
 msgid "Link is invalid"
-msgstr "Link is invalid"
+msgstr "Link er ugyldigt"
