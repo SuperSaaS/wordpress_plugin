@@ -101,7 +101,7 @@ msgstr "Dejar en blanco para <a href='https://www.supersaas.es/accounts/access#a
 msgid "Button settings"
 msgstr "Ajustes del botón"
 
-msgid "Error occured while parsing options. Did you provide options JSON properly?"
+msgid "Error occurred while parsing options. Did you provide options JSON properly?"
 msgstr "Ocurrió un error al analizar las opciones. ¿Proporcionó las opciones JSON correctamente?"
 
 msgid "Account name can't be blank"
