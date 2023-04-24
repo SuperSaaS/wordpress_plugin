@@ -68,7 +68,7 @@ msgstr "Eigen domeinnaam"
 msgid "If you created a custom domain name that points to SuperSaaS enter it here. Can be left blank."
 msgstr "Als u een eigen domeinnaam naar SuperSaaS laat wijzen voer die dan hier in."
 
-msgid "Your username is a supersaas reserved word. You might not be able to login. Do you want to continue?"
+msgid "Your username is a SuperSaaS reserved word. You might not be able to log in. Do you want to continue?"
 msgstr "Uw gebruikersnaam is een door SuperSaaS gereserveerd woord. Mogelijk kunt u niet inloggen. Wilt u doorgaan?"
 
 msgid "How would you like to show your SuperSaaS schedule?"
@@ -80,10 +80,10 @@ msgstr "SuperSaaS agenda weergave"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Toon een knop die de gebruiker doorstuurt naar mijn SuperSaaS agenda"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "Toon een de agenda via een venster of als knop geïntegreerd in mijn Wordpress site"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "Als de gebruiker is ingelogd in WordPress, dan wordt hij ingelogd in uw SuperSaaS account met zijn WordPress gebruikersnaam"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -95,22 +95,19 @@ msgstr "Plak hier de JavaScript <a href='https://www.supersaas.nl/info/doc/integ
 msgid "Paste the JavaScript code here"
 msgstr "Plak hier de JavaScript code"
 
-msgid "The default name of the schedule."
-msgstr "De naam van de agenda."
-
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Blanco laten voor <a href='https://www.supersaas.nl/accounts/access#account_list_schedules_1' target='_blank'>standaard agenda</a> (kan overschreven worden via de shortcode)"
 
 msgid "Button settings"
 msgstr "Instellingen voor de knop"
 
-msgid "Error occured while parsing options. Did you provide options JSON properly?"
+msgid "Error occurred while parsing options. Did you provide options JSON properly?"
 msgstr "Er is een fout opgetreden. Klopt de JSON wel?"
 
 msgid "Account name can't be blank"
 msgstr "De accountnaam moet ingevuld worden"
 
-msgid "Please provide and account name (not an email)"
+msgid "Please provide an account name (not an email)"
 msgstr "Vul alstublieft een accounnaam in (geen emailadres)"
 
 msgid "API key can't be blank"

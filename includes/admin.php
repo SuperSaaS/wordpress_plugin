@@ -97,7 +97,7 @@ function supersaas_options()
                required
         />
         <span class="error-msg error-msg-1 hidden" style="color: red"> <?php _e("Account name can't be blank", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
-        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please provide and account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
+        <span class="error-msg error-msg-2 hidden" style="color: red"> <?php _e("Please provide an account name (not an email)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> </span>
         <br/>
       </p>
 
@@ -120,7 +120,7 @@ function supersaas_options()
             <input name="ss_display_choice" type="radio" value="popup_btn"
                    class="tog" <?php echo get_option('ss_display_choice') === 'popup_btn' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
             />
-	          <?php _e('Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+	          <?php _e('Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
           </label>
         </div>
       </fieldset>
@@ -131,7 +131,7 @@ function supersaas_options()
                  value="1"
                  <?php echo get_option('ss_autologin_enabled') === '1' ? 'checked' : ''; // WPCS: XSS.EscapeOutput OK.?>
           />
-	        <?php _e('If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
+	        <?php _e('If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>
         </label>
 
         <br/>
@@ -165,7 +165,6 @@ function supersaas_options()
             />
             <br/>
             <span class='description'>
-              <?php _e('The default name of the schedule.', 'supersaas'); // WPCS: XSS.EscapeOutput OK.?> <br/>
               <?php _e("Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)", 'supersaas'); // WPCS: XSS.EscapeOutput OK.?>&nbsp;
             </span>
           </td>
