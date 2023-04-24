@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
-msgstr "This module displays a SuperSaaS appointment booking tool, either inside a frame or by clicking a ‘Book now’ button. It can optionally log the user into SuperSaaS using their WordPress user name, creating or updating the user’s information on SuperSaaS as needed. This saves users from having to log in twice. Works with both the free and paid versions of SuperSaaS."
+msgstr "Ce module affiche un outil de prise de rendez-vous SuperSaaS, soit dans un cadre, soit en cliquant sur un bouton ‘Réserver maintenant‘. Il peut éventuellement connecter l'utilisateur à SuperSaaS en utilisant son nom d'utilisateur WordPress, en créant ou en mettant à jour les informations de l'utilisateur sur SuperSaaS selon les besoins. Cela évite aux utilisateurs d'avoir à se connecter deux fois. Fonctionne avec les versions gratuites et payantes de SuperSaaS."
 
 msgid "Book Now!"
 msgstr "Réserver maintenant"
