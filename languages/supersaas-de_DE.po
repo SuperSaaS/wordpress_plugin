@@ -80,10 +80,10 @@ msgstr "SuperSaaS-Terminbuchungskalender Darstellung"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Eine Schaltfläche als Button zeigen, die den Benutzer zu meinem SuperSaaS-Terminbuchungskalender weiterleitet"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "Zeige einen SuperSaaS-Kalender integriert in meine Wordpress-Seite in einem Fenster oder über eine Schaltfläche als Popup-Button"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "Falls sich Benutzer bei WordPress einloggen, sollen diese gleichzeitig mit ihrem WordPress-Benutzernamen in ihr SuperSaaS-Konto eingeloggt werden."
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -94,9 +94,6 @@ msgstr "Einfügen des JavaScript <a href='https://www.supersaas.de/info/doc/inte
 
 msgid "Paste the JavaScript code here"
 msgstr "Fügen Sie den JavaScript-Code hier ein"
-
-msgid "The default name of the schedule."
-msgstr "Der Standardname des Terminbuchungsplans."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Leer lassen bei <a href='https://www.supersaas.de/accounts/access#account_list_schedules_1' target='_blank'>Standard-Kalender</a> (kann in Shortcode überschrieben werden)"

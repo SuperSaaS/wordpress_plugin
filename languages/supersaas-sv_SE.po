@@ -80,10 +80,10 @@ msgstr "Visning av SuperSaaS-schema"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Visa en knapp som skickar besökaren till min bokningssida på SuperSaaS"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "Visa min bokningssida på SuperSaaS integrerat i min Wordpress-sajt, inuti en ram eller via en knapp som öppnar ett popup-fönster"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "Om besökaren redan är inloggad i Wordpress, använd deras Wordpress-uppgifter för att logga in dem i ett användarkonto för min bokningsida på SuperSaaS"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -94,9 +94,6 @@ msgstr "Klistra in widget-koden som anpassats särskilt för ditt konto och kan 
 
 msgid "Paste the JavaScript code here"
 msgstr "Klistra in JavaScript-koden här"
-
-msgid "The default name of the schedule."
-msgstr "Namnet på schemat som visas som standard när någon besöker din bokningssida i SuperSaas."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Lämna tomt för att visa <a href='https://www.supersaas.se/accounts/access#account_list_schedules_1' target='_blank'>ditt förvalda schema</a> (kan skrivas över med kortkod i Wordpress)"

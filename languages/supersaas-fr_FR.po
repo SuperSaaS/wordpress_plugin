@@ -80,10 +80,10 @@ msgstr "Affichage de l'agenda SuperSaaS"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Afficher un bouton qui redirige l'utilisateur vers mon agenda SuperSaaS"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "Afficher un agenda SuperSaaS intégré à mon site WordPress à l'intérieur d'une fenêtre ou via un bouton de popup."
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "Si l'utilisateur est connecté à WordPress, connectez-le à votre compte SuperSaaS avec son nom d'utilisateur WordPress."
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -94,9 +94,6 @@ msgstr "Collez le code JavaScript du <a href='https://www.supersaas.fr/info/doc/
 
 msgid "Paste the JavaScript code here"
 msgstr "Collez le code JavaScript ici"
-
-msgid "The default name of the schedule."
-msgstr "Le nom par défaut du planning."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Laissez vide pour utiliser l'<a href='https://www.supersaas.fr/accounts/access#account_list_schedules_1' target='_blank'>agenda par défaut</a> (peut être remplacé dans le code)"

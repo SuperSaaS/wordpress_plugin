@@ -80,10 +80,10 @@ msgstr "SuperSaaS kalender visning"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Vis en knap, som videresender brugerne til min SuperSaaS kalender"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "Vis en SuperSaaS kalender, som er integreret med mit Wordpress website, indsat i en ramme (iFrame), eller via en popup knap"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "Er brugeren logget ind via WordPress, log brugeren ind på din SuperSaaS konto, via brugerens WordPress brugernavn"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -94,9 +94,6 @@ msgstr "Indsæt JavaScript <a href='https://www.supersaas.dk/info/doc/integratio
 
 msgid "Paste the JavaScript code here"
 msgstr "Indsæt din JavaScript kode her"
-
-msgid "The default name of the schedule."
-msgstr "Standard navn på kalenderen."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Efterlad blank til <a href='https://www.supersaas.dk/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (kan evt. overskrives via en såkaldt shortcode)"

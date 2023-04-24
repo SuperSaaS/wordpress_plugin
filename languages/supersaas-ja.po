@@ -80,10 +80,10 @@ msgstr "SuperSaaSスケジュール表示"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "ユーザーをSuperSaaS カレンダーに転送するボタンを表示する"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "フレーム内またはポップアップ ボタンを介して、Wordpressサイトに統合されたSuperSaaSカレンダーを表示する"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "ユーザーがWordPressにログインしている場合は、WordPressユーザー名でSuperSaaSアカウントにログインしてください。"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -94,9 +94,6 @@ msgstr "SuperSaaSサイトで生成されたJavaScript<a href='https://www.super
 
 msgid "Paste the JavaScript code here"
 msgstr "ここにJavaScript コードを貼り付けます。"
-
-msgid "The default name of the schedule."
-msgstr "スケジュールのデフォルト名"
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "<a href='https://www.supersaas.jp/accounts/access#account_list_schedules_1' target='_blank'>デフォルトカレンダー</a> は空白のままにします。(ショートコードで上書きできます)"

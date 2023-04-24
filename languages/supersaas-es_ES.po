@@ -80,10 +80,10 @@ msgstr "Visualización del horario de SuperSaaS"
 msgid "Show a button that forwards the user to my SuperSaaS calendar"
 msgstr "Mostrar un botón que redirige al usuario a mi calendario SuperSaaS"
 
-msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a popup button"
+msgid "Show a SuperSaaS calendar integrated into my Wordpress site inside a frame or via a pop-up button"
 msgstr "Mostrar un calendario SuperSaaS integrado en mi sitio de Wordpress dentro de un marco o mediante un botón emergente"
 
-msgid "If the user is logged into WordPress, log them into your SuperSaaS account with their WordPress user name"
+msgid "If the user is logged in to WordPress, log them in your SuperSaaS account with their WordPress user name"
 msgstr "Si el usuario ha iniciado sesión en WordPress, inicie sesión en su cuenta de SuperSaaS con su nombre de usuario de WordPress"
 
 msgid "Automatically logging in the user requires your <a href='https://www.supersaas.com/accounts/edit#api_key' target='_blank'>API key</a>"
@@ -94,9 +94,6 @@ msgstr "Pegue el <a href='https://www.supersaas.es/info/doc/integracion/integrac
 
 msgid "Paste the JavaScript code here"
 msgstr "Pegue el código JavaScript aquí"
-
-msgid "The default name of the schedule."
-msgstr "El nombre predeterminado del horario."
 
 msgid "Leave blank for <a href='https://www.supersaas.com/accounts/access#account_list_schedules_1' target='_blank'>default calendar</a> (can be overwritten in shortcode)"
 msgstr "Dejar en blanco para <a href='https://www.supersaas.es/accounts/access#account_list_schedules_1' target='_blank'>calendario predeterminado</a> (se puede sobrescribir en shortcode)"
