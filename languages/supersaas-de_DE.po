@@ -90,7 +90,7 @@ msgid "Automatically logging in the user requires your <a href='https://www.supe
 msgstr "Das automatische Einloggen des Benutzers verlangt Ihren <a href='https://www.supersaas.de/accounts/edit#api_key' target='_blank'>API Schlüssel</a>"
 
 msgid "Paste the JavaScript <a href='https://www.supersaas.com/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
-msgstr "Paste the JavaScript <a href='https://www.supersaas.de/info/doc/integration/integration_with_widget' target='_blank'>widget code</a> generated on the SuperSaaS site."
+msgstr "Einfügen des JavaScript <a href='https://www.supersaas.de/info/doc/integration/integration_with_widget' target='_blank'>Widget code</a> generated on the SuperSaaS site."
 
 msgid "Paste the JavaScript code here"
 msgstr "Fügen Sie den JavaScript-Code hier ein"
