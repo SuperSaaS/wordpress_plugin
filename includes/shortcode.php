@@ -115,7 +115,7 @@ function supersaas_button_hook($atts)
     foreach ($widget_options_matches as &$match_value) {
       foreach ($match_value as &$submatch_value) {
         $default_options_obj = json_decode($submatch_value);
-        $options_final = array();
+        $options_final = $default_options_obj;
         if (!empty($options)) {
           // Merge options provided in widget_script with options provided via shortcode
           $options_final = array_merge((array) $default_options_obj, (array) $options_obj);
