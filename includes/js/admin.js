@@ -99,6 +99,7 @@ jQuery(function ($) {
         data: configSummary, crossDomain: true,
         complete: submitThis.bind(this) // Preserve 'this' used in #submitThis for persistent 'valid' state
       });
+      setTimeout(submitThis.bind(this), 2000) // Submit the form anyway if a log request wont conclude in 2 seconds
     }
   })
 
