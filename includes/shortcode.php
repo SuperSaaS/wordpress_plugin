@@ -115,7 +115,7 @@ function supersaas_button_hook($atts)
     preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
     foreach ($widget_options_matches as &$match_value) {
       foreach ($match_value as &$submatch_value) {
-        $default_options_obj = json_decode($submatch_value);
+        $default_options_obj = json_decode($submatch_value, true);
         $options_final = $default_options_obj;
         if (!empty($options)) {
           // Merge options provided in widget_script with options provided via shortcode
