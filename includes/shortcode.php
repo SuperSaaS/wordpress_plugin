@@ -48,7 +48,8 @@ function supersaas_button_hook($atts)
   // Backward compatibility for users who will update the plugin without updating settings
   $display_choice = get_option('ss_display_choice', 'regular_btn');
   $widget_script = get_option('ss_widget_script');
-  $default_schedule = get_option('ss_schedule');
+  $default_schedule = trim(get_option('ss_schedule')); // remove trailing spaces
+  $default_schedule = str_replace(' ', '_', $default_schedule);
   $autologin_enabled = get_option('ss_autologin_enabled'); // one of the following: ("0", "1", "")
   $out = '';
   // Sanitize options provided via shortcode
@@ -114,7 +115,7 @@ function supersaas_button_hook($atts)
     preg_match_all("/SuperSaaS\([\s\S]+\K{[\s\S]*}(?=\))/i", $widget_script, $widget_options_matches);
     foreach ($widget_options_matches as &$match_value) {
       foreach ($match_value as &$submatch_value) {
-        $default_options_obj = json_decode($submatch_value);
+        $default_options_obj = json_decode($submatch_value, true);
         $options_final = $default_options_obj;
         if (!empty($options)) {
           // Merge options provided in widget_script with options provided via shortcode

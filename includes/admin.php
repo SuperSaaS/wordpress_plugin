@@ -48,6 +48,7 @@ function supersaas_register_assets()
 {
   wp_register_script("supersaas_custom_js_script", plugin_dir_url(__FILE__) . 'js/admin.js', array('jquery'), null);
   wp_enqueue_script('supersaas_custom_js_script');
+  wp_script_add_data( 'supersaas_custom_js_script', 'crossorigin', 'anonymous' );
 }
 
 /**
