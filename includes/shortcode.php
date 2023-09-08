@@ -22,7 +22,7 @@ function generate_schedule_link($api_domain, $account, $final_schedule_name, $la
     $href = "$api_domain$final_schedule_name";
   }
   if ($image) {
-    return '<a href="' . $href . '"><img src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
+    return '<a href="' . $href . '"><img class="supersaas-confirm" src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
   } else {
     return '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
   }
@@ -192,7 +192,7 @@ function supersaas_button_hook($atts)
             $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $final_schedule_name)) . '"/>';
 
             if ($image) {
-              $out .= '<input type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
+              $out .= '<input class="supersaas-confirm" type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
             } else {
               $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
             }
