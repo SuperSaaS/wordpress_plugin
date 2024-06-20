@@ -52,6 +52,12 @@ function supersaas_button_hook($atts)
   $default_schedule = str_replace(' ', '_', $default_schedule);
   $autologin_enabled = get_option('ss_autologin_enabled'); // one of the following: ("0", "1", "")
   $out = '';
+
+  // Sanitize image
+  if ($image) {
+    $image = esc_url_raw($image);
+  }
+
   // Sanitize options provided via shortcode
   $options = str_replace('\'', '"', $options);
   $options_obj = json_decode($options);
@@ -192,7 +198,7 @@ function supersaas_button_hook($atts)
             $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $final_schedule_name)) . '"/>';
 
             if ($image) {
-              $out .= '<input class="supersaas-confirm" type="image" src="' . esc_url_raw($image) . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
+              $out .= '<input class="supersaas-confirm" type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
             } else {
               $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
             }
