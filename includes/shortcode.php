@@ -192,7 +192,7 @@ function supersaas_button_hook($atts)
             $out .= '<input type="hidden" name="after" value="' . htmlspecialchars(str_replace(' ', '_', $final_schedule_name)) . '"/>';
 
             if ($image) {
-              $out .= '<input class="supersaas-confirm" type="image" src="' . $image . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
+              $out .= '<input class="supersaas-confirm" type="image" src="' . esc_url_raw($image) . '" alt="' . htmlspecialchars($label) . '" name="submit" onclick="return confirmBooking()"/>';
             } else {
               $out .= '<input class="supersaas-confirm" type="submit" value="' . htmlspecialchars($label) . '" onclick="return confirmBooking()"/>';
             }
