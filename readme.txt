@@ -4,7 +4,7 @@ Donate link: https://www.supersaas.com/
 Tags: appointment scheduling, booking calendar, reservations, appointments, meetings
 Requires at least: 2.7
 Tested up to: 6.3
-Stable tag: 2.1.
+Stable tag: 2.1.10
 License: GPLv2
 
 SuperSaaS is a flexible appointment scheduling system that works with many different businesses. The basic version is free.
@@ -47,7 +47,7 @@ SuperSaaS is available in over 28 languages. Check out the <a href="https://www.
 == Changelog ==
 
 = = 2.1.10 =
-* Shortcode images are sanitized
+* Shortcode image url is sanitized
 
 = 2.1.9 =
 * Ensure that every button displayed as a result of a shortcode has a 'supersaas-confirm' class
