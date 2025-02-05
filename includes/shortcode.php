@@ -22,9 +22,9 @@ function generate_schedule_link($api_domain, $account, $final_schedule_name, $la
     $href = "$api_domain$final_schedule_name";
   }
   if ($image) {
-    return '<a href="' . $href . '"><img class="supersaas-confirm" src="' . $image . '" alt="' . htmlspecialchars($label) . '"/></a>';
+    return '<a href="' . htmlspecialchars($href) . '"><img class="supersaas-confirm" src="' . htmlspecialchars($image) . '" alt="' . htmlspecialchars($label) . '"/></a>';
   } else {
-    return '<a href="' . $href . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
+    return '<a href="' . htmlspecialchars($href) . '"><button class="supersaas-confirm">' . htmlspecialchars($label) . '</button></a>';
   }
 }
 
